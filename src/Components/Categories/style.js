@@ -25,7 +25,7 @@ import { mobile } from "../../Responsive";
                 flex-direction: column;
                 justify-content: center;
                 align-items:center;
-                height: 350px;
+                height: 400px;
                 width: 250px;
                 margin:20px;
                 padding:10px;
@@ -59,7 +59,7 @@ import { mobile } from "../../Responsive";
 
         export const Image=styled.img`
                 object-fit: cover; 
-                width: 80%;
+                width: 100%;
                 height: 80%;
                 ${mobile({height:'70%', width:'80%'})}
 

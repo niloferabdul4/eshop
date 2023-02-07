@@ -1,6 +1,6 @@
 
- /* 
-const SliderSettings={
+ 
+const settings={
   
     autoplay: true,
     infiniteLoop:true,
@@ -19,7 +19,7 @@ const SliderSettings={
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           infinite: true,
           dots: true
         }
@@ -28,7 +28,7 @@ const SliderSettings={
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           initialSlide: 2
         }
       },
@@ -36,16 +36,18 @@ const SliderSettings={
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          initialSlide:0,
+          autoplaySpeed: 2000,
         }
       }
     ]
 }
-  export default SliderSettings;
+  export default settings;
 
-  */
-
-  const SliderSettings = {
+  
+/*
+  const settings = {
     autoplay: true,
     infiniteLoop:true,
     autoplaySpeed: 2000,
@@ -83,4 +85,6 @@ const SliderSettings={
     ]
   };
 
-  export default SliderSettings;
+  export default settings;
+
+  */

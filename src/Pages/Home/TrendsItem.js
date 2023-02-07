@@ -1,18 +1,20 @@
 
 import React from 'react';
-import { TrendsContainer,TrendsInfoContainer,TrendsTitle,TrendsPrice,Button,Image } from './style';
+import { TrendsContainer,TrendsInfoContainer,TrendsTitle,TrendsPrice,Button,Image,Offer } from './style';
 import { useNavigate } from 'react-router-dom';
 
 
 
 
-const TrendsItem = ({id,image,price,title}) => {
+const TrendsItem = ({id,image,price,title,OfferPercent}) => {
    const navigate=useNavigate();
+   const randomNum=Math.floor(Math.random()*OfferPercent.length)
    
     return (
               <>  
         
-          <TrendsContainer role='button' onClick={()=>{navigate(`/products/${id}`)}}>               
+          <TrendsContainer role='button' onClick={()=>{navigate(`/products/${id}`)}}> 
+            <Offer>{OfferPercent[randomNum]}</Offer>      
              <Image src={image} alt='' />           
              <TrendsTitle>{title}</TrendsTitle>
              <TrendsInfoContainer>

@@ -13,29 +13,22 @@ const ProductsContainer=styled.div`
     justify-content: center;    
     padding:10px; 
     margin:60px;
-
+    background-color:rgb(234,237,237);
 `
 
 
 const ProductsAll = () => {
   
-    const{products}=useContext(ProdContext)
-    
+    const{products}=useContext(ProdContext)  
 
-    
-         
-return (
+    return (   
+        <ProductsContainer>
 
-    
-    <ProductsContainer>
-
-            {products.map(item=>{return <ProductCard key={item.id}  prod={item}
-                                                  />  
-            })
-            }   
-       
-
-</ProductsContainer>
+                {products.map(item=>{return <ProductCard key={item.id}  prod={item}
+                                                    />  
+                })
+                }   
+       </ProductsContainer>
 
 
 );

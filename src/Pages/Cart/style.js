@@ -9,6 +9,7 @@ export const Container=styled.div`
         width:100%;
         color:rgba(0,0,0,0.74);
         padding: 20px;
+        height:100vh;
         ${mobile({ flexDirection:'column-reverse',padding:'10px'})}
 
 `

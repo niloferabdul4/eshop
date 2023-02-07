@@ -143,14 +143,14 @@ const SignInAlertBox=styled.div`
 /***********  TRENDS  STYLING    **************/
 
 const DealsWrapper=styled.div`
-    margin-left: 25px;
-    margin-right: 25px;    
+    margin-left: 15px;
+    margin-right: 15px;    
     padding: 10px;
     margin-bottom: 20px;
-    z-index: 1;   
-    display:flex;
-    
-    ${mobile({marginLeft:'0px',marginRight:'0px'})}
+    z-index: 1;  
+    width:100%;
+    padding: 30px;
+   // ${mobile({marginLeft:'0px',marginRight:'0px'})}
 `
 
 const Image=styled.img`
@@ -161,7 +161,7 @@ const Image=styled.img`
     min-height:140px;
     max-height: 160px;
     transition: tranform 0.1s ease-out; 
-    ${mobile({maxHeight:'150px',width:'100%', marginTop:'0px'})}
+    ${mobile({maxHeight:'160px',width:'200px', marginTop:'0px'})}
 `
 const TrendsContainer=styled.div`
     padding:20px;
@@ -174,19 +174,27 @@ const TrendsContainer=styled.div`
     z-index: 1;
     min-height: 400px;
     height: 100%;
-    width:280px;
+    width:300px;
     cursor: pointer;
+    position: realtive;
     color:rgba(0,0,0,0.7);
-  
     &:hover ${Image}
     {
        transform: scale(1.10);
        ${mobile({transform: 'scale(1.10)'})}
     };
-    ${mobile({maxHeight:'160px',width:'180px',margin:'0px'})}
+    ${mobile({padding:'15px',maxHeight:'300px'})}
 
 `
-
+const Offer =styled.span`
+    background-color: red;
+    color:white;
+    padding:10px;
+    position: absolute;
+    top: 0px;
+    ${mobile({padding:'10px'})}
+ 
+`
 const TrendsTitle=styled.p`
     font-weight: 400;
     font-size: 18px;
@@ -198,7 +206,7 @@ const TrendsTitle=styled.p`
     -webkit-line-clamp: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-     ${mobile({fontSize:'18px',marginBottom:'6px'})}
+     ${mobile({fontSize:'16px'})}
 `
 
 const TrendsInfoContainer=styled.div`
@@ -209,7 +217,7 @@ const TrendsInfoContainer=styled.div`
     padding: 10px;
     margin: 10px;  
     width:100%;
-    ${mobile({display:'flex',flexDirection:'column',alignItems:'center',gap:'10px'})}
+
 `
 
 const TrendsPrice=styled.div`
@@ -234,19 +242,8 @@ const Button=styled.button`
     
 `
 
-
-const ArrowBtn=styled.div`
-    display: inline-block;
-    line-height: normal;
-    vertical-align: top;
-    position: relative;
-    top: 50%;
-    height: 22px;
-    width: 13px;
-    margin-top: -11px;
-`
 /***********   END OF TRENDS STYLING   **************/
 
 export {BannerContainer,BannerImage,
         HomeContainer,Title,CategoriesWrapper,LeftSection,RightSection,AllContainer,DealsWrapper,SignInAlertBox,Text,SignInButton,
-        TrendsContainer,TrendsInfoContainer,TrendsTitle,TrendsPrice,Button,Image,ArrowBtn}
+        TrendsContainer,TrendsInfoContainer,TrendsTitle,TrendsPrice,Button,Image,Offer}

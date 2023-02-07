@@ -8,6 +8,7 @@ export const Container=styled.div`
   width:100%;
   margin-left: auto;
   margin-right:auto;
+  background-color: lightgrey;;
   ${mobile({flexDirection:'column'})}
  
   
@@ -35,7 +36,6 @@ export const ProductsSection=styled.div`
     justify-content: center; 
     padding: 40px;
     box-shadow: rgba(53, 48, 48, 0.15) 1.95px 1.95px 2.6px;
-    background-color: white;
     color:rgba(0,0,0,0.7); 
     margin : 10px; 
     ${mobile({display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:'2px',margin:'10px',width:'100%'})}

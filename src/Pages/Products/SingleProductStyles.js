@@ -8,8 +8,6 @@ export const ProductContainer=styled.div`
         margin-right: auto;
         width:100%;
         padding:60px;
-        //height:100vh;
-        background-color: white;
         color:rgba(0,0,0,0.74);
         ${mobile({ flexDirection:'column',padding:'10px'})}
        

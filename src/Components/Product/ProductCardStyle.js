@@ -8,7 +8,8 @@ export const ProductContainer=styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    box-shadow: rgba(53, 48, 48, 0.15) 1.95px 1.95px 2px;
+    border:0.5px solid lightgrey;
+    //box-shadow: rgba(53, 48, 48, 0.15) 1.95px 1.95px 2px;
     background-color: white;
     z-index: 1;
     width: 100%;

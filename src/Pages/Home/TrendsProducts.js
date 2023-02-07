@@ -1,6 +1,6 @@
 import React,{useState,useEffect,useContext} from 'react';
 import { ProdContext } from '../../Context/ProdContext';
-import { DealsWrapper,Title,ArrowBtn } from './style';
+import { DealsWrapper,Title } from './style';
 import TrendsItem from './TrendsItem';
 //import NavigateNextIcon from '@mui/icons-material/NavigateNextIcon';
 import settings from './Settings';
@@ -12,9 +12,8 @@ const TrendsProducts = () => {
 
     const {products}=useContext(ProdContext)
     const [trendsProducts,setTrendsProducts]=useState([])    
-    //const randomNum=Math.floor(Math.random()*((products.length)))
-    //console.log(randomNum)
-   
+    const OfferPercent=['Upto 50%','Upto 25%','Upto 75%','Upto 10%','Upto 15%','Upto 40%','Upto 80%','Upto 60%','Upto 70%']
+ 
    useEffect(()=>{
         if(products===[]){
             <p>Loading...</p>
@@ -25,13 +24,13 @@ const TrendsProducts = () => {
           
         }
                    
-       },[])
+       },[products])
 
     return (
         <>
-         <DealsWrapper>
+        
           <Title>Top Deals</Title> 
-         
+          <DealsWrapper>
             <Slider {...settings} >                                  
                     {trendsProducts.map(item=>{return <TrendsItem   key={item.id}
                                                                     id={item.id}
@@ -39,13 +38,12 @@ const TrendsProducts = () => {
                                                                     title={item.title}
                                                                     price={item.price}
                                                                     category={item.category}
-                                                                    image={item.image}                   
-                    />})}   
+                                                                    image={item.image} 
+                                                                    OfferPercent={OfferPercent}  
+                                                                         
+                    />})}    
              </Slider>
-             <ArrowBtn>
-              {/*<NavigateNextIcon />*/}
-             </ArrowBtn>
-            
+                  
             </DealsWrapper>
         </>
     );
