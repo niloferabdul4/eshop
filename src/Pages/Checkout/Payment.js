@@ -15,7 +15,7 @@ const Payment = () => {
 
 
  const toggleModal=()=>{     
-   setModal(true) 
+   setModal(true)                    /*** toggle modal */
 }
 
 const handleSubmit=()=>{
