@@ -1,8 +1,7 @@
 import React from 'react';
 import { Container,Filter,FilterColor,FilterTitle,SelectBox,Span } from './FilterContainerStyles';
 
-const FilterContainer = () => {
-    
+const FilterContainer = () => {   
    
     const sizeOptions=['S','M','L','XL']
  
