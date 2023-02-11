@@ -32,7 +32,6 @@ const Home = () => {
                </LeftSection> 
                 <RightSection>
 
-
                 <AllContainer role='button'  onClick={()=>{navigate(`/products`)}}>               
                         <CategoryTitle> All Products</CategoryTitle>
                         <Image src='https://akns-images.eonline.com/eol_images/Entire_Site/202278/rs_1024x759-220808151259-1024-ecomm-back-to-school.jpg?fit=around%7C1024:759&output-quality=90&crop=1024:759;center,top'  alt=''/>                  

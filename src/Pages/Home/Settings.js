@@ -8,8 +8,8 @@ const settings={
     dots: true,
     infinite: true,
     speed: 600,
-    slidesToShow: 5,
-    slidesToScroll: 3,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     initialSlide: 0,
    
     
@@ -18,8 +18,8 @@ const settings={
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           dots: true
         }
@@ -27,8 +27,8 @@ const settings={
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           initialSlide: 2
         }
       },
