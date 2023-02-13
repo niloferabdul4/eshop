@@ -8,8 +8,8 @@ const settings={
     dots: true,
     infinite: true,
     speed: 600,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 5,
+    slidesToScroll: 3,
     initialSlide: 0,
    
     

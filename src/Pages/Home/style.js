@@ -143,8 +143,8 @@ const SignInAlertBox=styled.div`
 /***********  TRENDS  STYLING    **************/
 
 const DealsWrapper=styled.div`
-    margin-left: 15px;
-    margin-right: 15px;    
+    margin-left: 30px;
+    margin-right: 35px;    
     padding: 10px;
     margin-bottom: 20px;
     z-index: 1;  
@@ -172,7 +172,7 @@ const TrendsContainer=styled.div`
     align-items: center;
     background-color:white;
     z-index: 1;
-    min-height: 400px;
+    min-height: 360px;
     height: 100%;
     width:300px;
     cursor: pointer;

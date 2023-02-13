@@ -11,6 +11,7 @@ const HeaderContainer=styled.div`
     align-items: center;
     justify-content: space-between;
     position: sticky;
+    top:0;
     z-index: 100;
     ${mobile({ height:'50px', gap:'10px' })}   
  
