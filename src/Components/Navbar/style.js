@@ -8,7 +8,8 @@ const NavbarContainer=styled.div`
         display: flex;
         flex-direction: row;
         background: transparent;
-        position: sticky;       
+        position: sticky;   
+        z-index:2 ;
                
 `
 /*
@@ -44,7 +45,7 @@ const NavBarLink=styled(NavLink)`
         font-size: 18px;
         color: black;
         cursor:pointer;
-        ${mobile({ fontSize:'16px',marginRight:'20px' })}
+        ${mobile({ fontSize:'15px',marginRight:'20px' })}
      
 `
 

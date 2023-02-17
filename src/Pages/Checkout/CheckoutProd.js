@@ -1,16 +1,11 @@
 import React from 'react';
-import QuantityContainer from '../../Components/QuantityContainer/QuantityContainer';
-import { useContext} from 'react';
-import { AppContext } from '../../Context/AppContext';
 import { useNavigate} from 'react-router-dom';
 
 import {  InfoContainer,
-  CartProductContainer,
+  CheckoutProductContainer,
   ProductTitle,
-  DeleteButton,
-  BtnContainer,
   AmountDetails,
-  Image } from '../Cart/style';
+  Image } from './style';
 
 
 
@@ -19,14 +14,13 @@ const CheckoutProduct = ({checkoutProd}) => {
         const navigate=useNavigate()
         return (
         <>   
-        <CartProductContainer >           
+        <CheckoutProductContainer >           
            <Image src={checkoutProd.image} alt='' role='button' onClick={()=>{navigate(`/products/${checkoutProd.id}`)}} />                           
              <InfoContainer>                  
-                    <ProductTitle>{checkoutProd.title}</ProductTitle>  
-                    <hr></hr>                   
+                    <ProductTitle>{checkoutProd.title}</ProductTitle>                                      
                     <AmountDetails>${checkoutProd.price}</AmountDetails>                                                                              
-             </InfoContainer>                         
-        </CartProductContainer>
+             </InfoContainer>                                  
+        </CheckoutProductContainer>
         </>
     );
 }

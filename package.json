@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mui/icons-material": "^5.11.9",
     "@stripe/react-stripe-js": "^1.16.2",
     "@stripe/stripe-js": "^1.46.0",
     "@testing-library/jest-dom": "^5.16.5",

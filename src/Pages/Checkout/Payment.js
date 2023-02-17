@@ -28,20 +28,17 @@ const handleSubmit=()=>{
     return (
         <>       
             <PaymentContainer> 
-                <h2 style={{margin:'30px'}}> Checkout ({cartItems?.length} items)</h2>
-                
+                <h2> Checkout ({cartItems?.length} items)</h2>                
                 <PaymentSection>
                         <PaymentTitle>
                             Delivery Address
-                        </PaymentTitle>
-                    
+                        </PaymentTitle>                    
                         <PaymentAddress>
                             <p>{user?.email}</p>
-                            <p>First line</p>
-                            <p>Second</p>
+                            <p>ABC Street, Al Baik Road</p>
+                            <p>Dubai</p>
                         </PaymentAddress>
-                </PaymentSection>
-            
+                </PaymentSection>            
                  <PaymentSection>
                          <PaymentTitle>
                             Items For Checkout

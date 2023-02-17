@@ -38,7 +38,7 @@ const Login = () => {
    const handleSubmit=(event)=>
    { 
     event.preventDefault();
-    setFormErrors(validate(formData));
+    //setFormErrors(validate(formData));
     signInWithEmailAndPassword(auth,formData.email,formData.password)
         .then((auth)=>{  
                         if (auth)
@@ -51,7 +51,7 @@ const Login = () => {
       
    }
     
-
+/*
    const validate=(values)=>{
 
         const errors={};
@@ -83,7 +83,7 @@ const Login = () => {
         return errors;
      
     }
-
+*/
    
 
     return (

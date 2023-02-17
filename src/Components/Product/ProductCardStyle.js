@@ -1,4 +1,3 @@
-
 import styled from "styled-components"
 import { mobile } from "../../Responsive"
 export const ProductContainer=styled.div`
@@ -16,8 +15,7 @@ export const ProductContainer=styled.div`
     height: 540px;
     max-width: 340px;  
     color:rgba(0,0,0,0.7);  
-    ${mobile({ height:'450px',maxWidth:'200px',margin:'2px',boxShadow:'none'})}
-
+    ${mobile({ height:'450px',maxWidth:'180px',margin:'0px',boxShadow:'none'})}
 `
 
 export const Image=styled.img`
@@ -26,7 +24,6 @@ export const Image=styled.img`
     width:100%;
     max-height:200px; 
     ${mobile({ width:'140px',height:'140px',marginBottom:'10px'})}
-
     `
 
 export const Title=styled.h3`
@@ -36,7 +33,7 @@ export const Title=styled.h3`
     text-align: justify;
     margin-bottom: 10px;
     line-height: 30px;
-    ${mobile({ fontSize:'14px', fontWeight: '400'})}
+    ${mobile({ fontSize:'15px', fontWeight: '400',lineHeight:'25px'})}
   
 `
 
@@ -55,9 +52,9 @@ export const InfoContainer=styled.div`
     gap:20px;  
     ${mobile({ padding:'16px',margin:'0px 20px'})}
    
-
  
 `
+
 
 export const Price=styled.div`
     display: flex;
@@ -76,6 +73,3 @@ export const Rating=styled.div`
     margin: 15px 0px;  
     ${mobile({ fontSize:'14px',margin:'0px'})}  
 `
-
-
-

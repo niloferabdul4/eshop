@@ -9,7 +9,7 @@ export const ProductContainer=styled.div`
         width:100%;
         padding:60px;
         color:rgba(0,0,0,0.74);
-        ${mobile({ flexDirection:'column',padding:'10px'})}
+        ${mobile({ flexDirection:'column',padding:'0px',margin:'0px'})}
        
 
 `
@@ -25,7 +25,7 @@ export const ImageContainer=styled.div`
 export const Image=styled.img`
        width:100%;
        object-fit: contain;      
-       ${mobile({ width:'100%'})}
+       ${mobile({ width:'80%'})}
 `
 export const InfoContainer=styled.div`
         flex:0.55;

@@ -4,6 +4,7 @@ import ProductCard from './ProductCard';
 import styled from 'styled-components';
 import { useContext } from 'react';
 import { ProdContext } from '../../Context/ProdContext';
+import FilterToggle from '../FilterToggle/FilterToggle';
 
 
 const ProductsContainer=styled.div`
@@ -14,6 +15,7 @@ const ProductsContainer=styled.div`
     padding:10px; 
     margin:60px;
     background-color:rgb(234,237,237);
+    ${mobile({margin:'0px'})}
 `
 
 
@@ -22,14 +24,16 @@ const ProductsAll = () => {
     const{products}=useContext(ProdContext)  
 
     return (   
-        <ProductsContainer>
+        <>
+            <FilterToggle/>
+            <ProductsContainer>
 
-                {products.map(item=>{return <ProductCard key={item.id}  prod={item}
-                                                    />  
-                })
-                }   
-       </ProductsContainer>
-
+                    {products.map(item=>{return <ProductCard key={item.id}  prod={item}
+                                                        />  
+                    })
+                    }   
+        </ProductsContainer>
+        </>
 
 );
 }

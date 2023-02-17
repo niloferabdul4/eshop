@@ -24,34 +24,27 @@ import TrendsProducts from './Pages/Home/TrendsProducts';
 
 const ProductsByCategoryLists = lazy(() => import('./Pages/Products/ProductByCategoryLists'));
 
-
-
 function App() {
 
-  const{setUser,setProducts}=useContext(ProdContext)
+  const{setUser,setProducts,filteredProducts}=useContext(ProdContext)
+    useEffect(()=>{fetch('https://fakestoreapi.com/products')
+                  .then(res=>res.json())
+                  .then(json=>setProducts(json))},[])
 
-
-  useEffect(()=>{fetch('https://fakestoreapi.com/products')
-  .then(res=>res.json())
-  .then(json=>setProducts(json))},[])
-
-  useEffect(() => {
-
-    auth.onAuthStateChanged(authUser =>{
-      if(authUser){
-        setUser(authUser)
-      }else{
-       setUser(null)
-      }
-    })
-  }, [])
+    useEffect(() => {
+      auth.onAuthStateChanged(authUser =>{
+        if(authUser){
+          setUser(authUser)
+        }else{
+        setUser(null)
+        }
+      })
+    }, [])
 
   
-
   return (  
    <Suspense fallback={<div>....Loading</div>}>
-   <div className="App">  
-              
+   <div className="App">                
               <Header />
               <Navbar />            
               <Routes> 

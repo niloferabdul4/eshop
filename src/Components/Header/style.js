@@ -13,7 +13,7 @@ const HeaderContainer=styled.div`
     position: sticky;
     top:0;
     z-index: 100;
-    ${mobile({ height:'50px', gap:'10px' })}   
+    ${mobile({ height:'50px', margin:'0px'})}   
  
 `
 

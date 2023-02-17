@@ -11,6 +11,7 @@ import { mobile } from "../../Responsive"
     margin-left: auto;
     margin-right: auto;
     
+    
 `
 
  const Wrapper=styled.div`
@@ -22,7 +23,7 @@ import { mobile } from "../../Responsive"
     background-color: white;
     width:25%;
     padding: 30px;
-    ${mobile({margin:'50px',padding:'20px',width:'100%'})} 
+    ${mobile({margin:'10px 50px',padding:'20px',width:'80%'})} 
     
 `
 
@@ -44,6 +45,7 @@ import { mobile } from "../../Responsive"
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    ${mobile({padding:'6px'})}
     
 
 `

@@ -48,7 +48,7 @@ import { mobile } from "../../Responsive"
         height:40px;
         border-radius: 5px;
         border: none;
-        ${mobile({ width: "100%" })}
+        ${mobile({ height:'30px',width: "100%" })}
 
         `
     export const Button=styled.button`
@@ -58,7 +58,7 @@ import { mobile } from "../../Responsive"
         border-radius: 5px;
         font-size: 1rem;
         border: none;
-        ${mobile({ fontSize:'0.8rem'})}
+        ${mobile({ height:'30px',fontSize:'0.8rem'})}
 
         `
 

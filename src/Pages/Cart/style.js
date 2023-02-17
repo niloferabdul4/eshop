@@ -9,21 +9,22 @@ export const Container=styled.div`
         width:100%;
         color:rgba(0,0,0,0.74);
         padding: 20px;
-        height:100vh;
-        ${mobile({ flexDirection:'column-reverse',padding:'10px'})}
+        height:100%;
+        ${mobile({ flexDirection:'column-reverse',padding:'0px'})}
 
 `
 
 export const LeftWrapper=styled.div`
         flex:0.75;
         margin:10px; 
-        ${mobile({margin:'0px'})}
+        ${mobile({margin:'10px 0px'})}
+      
 `
 
 export const RightWrapper=styled.div`
         flex:0.25;
         margin:10px; 
-        
+        ${mobile({margin:'10px 0px'})}
 `
 
 export const Button=styled.div`
@@ -137,7 +138,7 @@ export const CartProductContainer=styled.div`
         display:flex;
         margin: 6px 0px;
         padding: 10px;
-        ${mobile({flexDirection:'row',minHeight:'200px'})}
+        ${mobile({flexDirection:'row',minHeight:'200px',margin:'0px'})}
       
 `
 
