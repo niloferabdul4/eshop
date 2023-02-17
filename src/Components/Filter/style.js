@@ -81,3 +81,10 @@ export const PriceRange=styled.input`
 width:100%;
 
 `
+export const RatingFilter=styled.div`
+
+width:100%;
+    
+    font-size: 16px;
+    ${mobile({fontSize:'14px',padding:'6px'})}
+`

@@ -1,7 +1,7 @@
 import React, { useContext} from 'react';
 import {IoMdRemove,IoMdAdd} from 'react-icons/io'
 import styled from 'styled-components';
-import { AppContext } from '../../Context/AppContext';
+import { Context } from '../../Context/Context';
 import { mobile } from '../../Responsive';
 
 
@@ -32,7 +32,7 @@ const QtyAmount=styled.div`
 
 const QuantityContainer = ({cartProd}) => { 
 
-    const {increaseQty,decreaseQty}=useContext(AppContext)
+    const {increaseQty,decreaseQty}=useContext(Context)
     return (
         <>
            <Container >

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useContext } from 'react';
-import { AppContext } from '../../Context/AppContext';
+import { Context } from '../../Context/Context';
 import { ProdContext } from '../../Context/ProdContext';
 import {PaymentContainer,PaymentItem,PaymentAddress,PaymentSection,PaymentTitle,PaymentDetails,OrderContainer,Button} from './style'
 import CheckoutProd from './CheckoutProd'
@@ -8,7 +8,7 @@ import Modal from '../../Components/OrderModal/Modal';
 
 
 const Payment = () => {
- const {cartItems,totalPrice}=useContext(AppContext)
+ const {cartItems,totalPrice}=useContext(Context)
  const [success,setSuccess]=useState(false)
  const {setModal,user}=useContext(ProdContext)     
 

@@ -1,6 +1,6 @@
 import React,{useContext} from 'react';
 import QuantityContainer from '../../Components/QuantityContainer/QuantityContainer';
-import { AppContext } from '../../Context/AppContext';
+import { Context } from '../../Context/Context';
 import { useNavigate} from 'react-router-dom';
 import { ProdContext } from '../../Context/ProdContext';
 
@@ -16,7 +16,7 @@ import { CartProductContainer,
 
 const CartProduct = ({cartProd}) => {     
         const {size}=useContext(ProdContext)
-        const {removeFromCart}=useContext(AppContext)      
+        const {removeFromCart}=useContext(Context)      
         const navigate=useNavigate()
     
 

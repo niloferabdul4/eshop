@@ -1,5 +1,4 @@
-import React from 'react';
-import {useEffect,useContext } from 'react';
+import React,{useContext} from 'react';
 import Filter from '../../Components/Filter/Filter';
 import {Container,ProductsSection,FilterToggle,FilterSection} from './styles';
 import { ProdContext } from '../../Context/ProdContext';
@@ -8,10 +7,8 @@ import {RiArrowDropDownLine} from 'react-icons/ri'
 
 const Products = () => {
   
-    const{products,setProducts,showFilters,setShowFilters}=useContext(ProdContext)      
-    useEffect(()=>{fetch('https://fakestoreapi.com/products')
-                .then(res=>res.json())
-                .then(json=>setProducts(json))},[])
+    const{products,showFilters,setShowFilters}=useContext(ProdContext)   
+ 
  
     return (
         <Container>

@@ -1,5 +1,6 @@
-import React,{useEffect,useState,useContext} from 'react';
+import React,{useState,useContext} from 'react';
 import { ProdContext } from '../../Context/ProdContext';
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { 
         FilterWrapper,
         Title,
@@ -8,58 +9,54 @@ import {
         Span,
         CategoryName,
         PriceRange,
-        Sort, } from './style';
+        Sort,
+        RatingFilter } from './style';
+import { FilterContext } from '../../Context/FilterContext';
 
 const Filter = () => {
-
+/*
     const[selectedCategory,setSelectedCategory]=useState('')
    // const [filteredProducts,setFilteredProducts]=useState([])
-    const [maxPrice,setMaxPrice]=useState(0)
-    const[sort,setSort]=useState(null)
+    
+    const [maxPrice,setMaxPrice]=useState(1000)
+    const[sort,setSort]=useState('')
+    */
+   
     const{products,setProducts}=useContext(ProdContext)
+    const {filterState:{ sort,rating,category,price},filterDispatch}=useContext(FilterContext)
+  
  /***************Category Filter  ************************/
 
  const filterCategory=(event)=>
- {
+  {
  
-     setSelectedCategory(event.target.value)   
-     const updated=products.filter(item=>(item.category===selectedCategory)) 
-     setProducts(updated)     
+   filterDispatch({type:'FILTER BY CATEGORY',payload:category})
  }
-
- useEffect(()=>{fetch(`https://fakestoreapi.com/products/category/${selectedCategory}`)
- .then(res=>res.json())
- .then(json=>setProducts(json))},[selectedCategory])
-
 
 /************** Price Range  Filter *****************************/
 
-const filterPrice=(event)=>
+const filterPrice=()=>
 {
  
- setMaxPrice(event.target.value) 
- const updatedProducts=products.filter(item=>(item.price<=maxPrice))
- setProducts(updatedProducts) 
+ filterDispatch({type:'FILTER BY PRICE RANGE',
+                payload:price})
    
 }
 
 /*******************  Sort Products By Price  **************/
 
- const sortAsc=()=>{
-     setSort('asc')
-     const sortedProducts=(products.sort((a, b) => a.price-b.price));
-     setProducts(sortedProducts)   
-       
+ const sortAsc=()=>
+ {
+    filterDispatch({type:'',
+                    payload:'asc'}) 
 
  }
 
- const sortDesc=()=>{
-     setSort('desc')
-     const sortedProducts=(products.sort((a, b) => b.price-a.price));
-     setProducts(sortedProducts) 
+ const sortDesc=()=>
+ {
+    filterDispatch({type:'',
+                    payload:'desc'})
  }
-
- 
 
     return (
         <>
@@ -68,7 +65,7 @@ const filterPrice=(event)=>
         <Title>Filters</Title>         
         <Span>
           <SubTitle>Filter By Category</SubTitle>           
-                 <FilterWrapper onChange={filterCategory}>  
+                 <FilterWrapper onChange={filterCategory} >  
                        <CategoryName>Select Category</CategoryName>
                        <CategoryName value='electronics'>Electronics</CategoryName>
                        <CategoryName value="men's clothing" >Men's Fashions</CategoryName>
@@ -78,8 +75,8 @@ const filterPrice=(event)=>
         </Span>
        <Span>
             <SubTitle>Filter By Price </SubTitle>            
-            <PriceRange type='range' min='1' max='1000' value={maxPrice} onChange={filterPrice}/>                        
-            <label style={{marginLeft:'300px'}}>{maxPrice}</label>
+            <PriceRange type='range' min={1} max={1000} value={price} onChange={filterPrice}/>                        
+            <label style={{marginLeft:'300px'}}>{price}</label>
        </Span>
        <Span>
             <SubTitle>Sort By </SubTitle>
@@ -91,6 +88,27 @@ const filterPrice=(event)=>
                     <input type='radio' name='price' id='2' value='desc' onChange={sortDesc}  />
                     <label htmlFor='2'>Price(Highest First)</label>
              </Sort>
+       </Span>
+       <Span>
+         <SubTitle>Rating</SubTitle>
+         <RatingFilter>
+
+            {/*create an Empty array of 5 , map by taking only the index
+               check rating for every iteration...
+               when clicked , the current index will be changed to rating value ie) setRating(i+1)
+               if rating is > current index=>render the filled icon or else empty icon
+            */}
+                                                                      
+            {[...Array(5)].map((_,i)=>                            
+             <span key={i} onClick={filterDispatch({type:'FILTER BY RATING',
+                                                   payload:i+1})}>
+                {rating>i? 
+                    ( <AiFillStar color='gold' size={22} />)
+                    :
+                    (<AiOutlineStar size={22}/>)
+                }
+            </span>)}
+         </RatingFilter>
        </Span>
        </FilterContainer>
 

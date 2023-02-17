@@ -16,7 +16,6 @@ export const ProdContext=createContext()           // create & export ProdContex
 const ProdContextProvider = ({children}) => {
  
     const [products,setProducts]=useState([])
-    const [filteredProducts,setFilteredProducts]=useState([])
     const [modal,setModal]=useState(false)
     const [showFilters,setShowFilters]=useState(false)
     const [user,setUser]=useState(null)
@@ -28,7 +27,7 @@ const ProdContextProvider = ({children}) => {
     return (   
 
      <div>
-     <ProdContext.Provider value={{ products,setProducts,filteredProducts,setFilteredProducts,modal,setModal,user,setUser,toggleModal,showFilters,setShowFilters}}>
+     <ProdContext.Provider value={{ products,setProducts,modal,setModal,user,setUser,toggleModal,showFilters,setShowFilters}}>
            {children}
         </ProdContext.Provider>
         </div>

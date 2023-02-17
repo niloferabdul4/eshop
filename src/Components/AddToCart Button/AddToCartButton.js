@@ -1,10 +1,11 @@
 import React from 'react';
 import { useContext } from 'react';
-import { AppContext } from '../../Context/AppContext';
+import { Context } from '../../Context/Context';
 import { Button } from '../../Pages/Products/SingleProductStyles';
 
 const AddToCartButton = ({prod}) => {
-    const {addToCart}=useContext(AppContext)
+    const {addToCart}=useContext(Context)
+    
  
     return (
         <div>                  

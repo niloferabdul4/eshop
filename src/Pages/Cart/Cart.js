@@ -2,13 +2,13 @@
 import React,{useContext} from 'react';
 import { useNavigate} from 'react-router-dom';
 import {Container,LeftWrapper,RightWrapper,Button,CButton,Title,OrderSummary,AmountDetails,ClearButton,Message} from './style'
-import { AppContext } from '../../Context/AppContext';
+import { Context } from '../../Context/Context';
 import CartProduct from './CartProduct';
 import { ProdContext } from '../../Context/ProdContext';
 
 
 const Cart = () => {  
-      const {cartItems,clearItems,itemCount,totalPrice}=useContext(AppContext)  
+      const {cartItems,clearItems,itemCount,totalPrice}=useContext(Context)  
       const {user} =useContext(ProdContext)
            
       const navigate=useNavigate()    

@@ -1,11 +1,11 @@
 import React,{useContext} from 'react';
 import {AiOutlineShoppingCart}from 'react-icons/ai'
 import { ShopCart,CartCount,Links} from './style';
-import {AppContext} from '../../Context/AppContext';
+import {Context} from '../../Context/Context';
 
 const ShoppingCart = () => {
 
-    const {itemCount}=useContext(AppContext)
+    const {itemCount}=useContext(Context)
   
      
     return (
