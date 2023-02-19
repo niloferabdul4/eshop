@@ -8,7 +8,7 @@ import Modal from '../../Components/OrderModal/Modal';
 
 
 const Payment = () => {
- const {cartItems,totalPrice}=useContext(Context)
+ const {state:{cartItems,totalPrice}}=useContext(Context)
  const [success,setSuccess]=useState(false)
  const {setModal,user}=useContext(ProdContext)     
 
@@ -21,7 +21,7 @@ const Payment = () => {
 const handleSubmit=()=>{
    setSuccess(prevState=>!prevState)
    setModal(true)
-
+   
  
 }
 
