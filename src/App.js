@@ -1,5 +1,4 @@
-import React , {useEffect,useContext} from 'react';
-//import './App.css';
+import React from 'react';
 import Header from './Components/Header/Header';
 import Navbar from './Components/Navbar/Navbar';
 import Home from './Pages/Home/Home';
@@ -44,8 +43,7 @@ function App() {
                      <Route path='payment'   element={<Payment/>}  />        
                     
               </Routes>
-              <Newsletter />
-                   
+              <Newsletter />                  
      
     </div>
 </Suspense>   

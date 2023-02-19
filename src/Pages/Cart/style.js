@@ -41,7 +41,7 @@ export const Button=styled.div`
         justify-content:center ;
         margin-left: auto;
         margin-right: auto; 
-        ${mobile({height:'35px',fontSize:'0.9rem'})}
+        ${mobile({height:'32px',fontSize:'14px'})}
             
         
 `  
@@ -68,7 +68,7 @@ export const Title=styled.h2`
         font-weight: 600;
         padding:10px;
         justify-content: flex-start;
-        ${mobile({fontSize:'18px'})}
+        ${mobile({fontSize:'20px',lineHeight:'30px'})}
     
 `
 
@@ -105,6 +105,7 @@ export const ClearButton=styled.button`
         color: white;
         width:100%;
         margin: 20px 0px ;
+        ${mobile({height:'32px',fontSize:'14px'})}
 
 `
 export const Message=styled.p`
@@ -112,6 +113,7 @@ export const Message=styled.p`
        margin-left: auto;
        margin-right: auto;
        margin: 100px;
+       ${mobile({ fontSize:'16px'})}   
 
 
 
@@ -186,7 +188,7 @@ export const BtnContainer=styled.div`
 export const ProductTitle=styled.h3`
         font-weight: 400;
         text-align: justify;
-        ${mobile({ fontSize:'16px',wordWrap:'break-word'})}
+        ${mobile({ fontSize:'16px',wordWrap:'break-word',fontSize:'16px',lineHeight:'30px'})}
 
 `
 export const Price=styled.div`
@@ -194,7 +196,7 @@ export const Price=styled.div`
         flex-direction: row;        
         font-size: 20px;
         font-weight:600;
-        ${mobile({ fontSize:'18px'})}
+        ${mobile({ fontSize:'16px'})}
 `
 
 export const DeleteButton=styled.button`
@@ -206,7 +208,7 @@ export const DeleteButton=styled.button`
         font-size: 1.1rem;
         width: 100px;
         background-color: white;
-        ${mobile({ fontSize:'1.0rem',width:'70px'})}   
+        ${mobile({ fontSize:'0.96rem',width:'80px'})}   
 
 `
 

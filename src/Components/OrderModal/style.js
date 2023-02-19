@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../../Responsive";
 
 const OpenModalBtn=styled.div`
     padding: 10px 20px;
@@ -9,34 +10,37 @@ const OpenModalBtn=styled.div`
 `
 
 const Overlay=styled.div`
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
+    width: 100%;
+    height: 100%;
+    position: fixed;   
     background: rgba(49,49,49,0.8);
+    transition: 3s all ease;
+      
 `
 
 
 const ModalContent=styled.div`
-    position: absolute;
-    top:50%;
+    position: fixed;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #f1f1f1;
+    background-color: white;
     padding: 100px 50px;
     border-radius: 10px;
-    width: 600px;
+    max-width: 600px;
+    width:100%;
     height:300px;
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 8px; 
     line-height: 40px;
-    
+    ${mobile({ maxWidth:'350px',height:'260px',padding:'50px 20px'})}
+
 
 `
 
 const ModalInfo=styled.p`
     font-size:18px;
+    ${mobile({ fontSize:'16px'})}
 
 `
 
@@ -54,8 +58,8 @@ const ModalTitle=styled.h2`
 
 
 const Button=styled.div`
-        height:50px;
-        width:300px;
+        height:40px;
+        width:200px;
         border-radius: 6px;
         background-color: #2874f0;
         color:white;
@@ -67,7 +71,9 @@ const Button=styled.div`
         margin-right: auto;
         margin-top: 20px;
         margin-bottom: 20px;
-        line-height   :50px ;
+        line-height:35px;
+        ${mobile({ fontSize:'0.98rem'})}
+      
 
 ` 
 

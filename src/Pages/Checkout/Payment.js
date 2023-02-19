@@ -10,19 +10,17 @@ import Modal from '../../Components/OrderModal/Modal';
 const Payment = () => {
  const {state:{cartItems,totalPrice}}=useContext(Context)
  const [success,setSuccess]=useState(false)
- const {setModal,user}=useContext(ProdContext)     
-
-
+ const {setModal,user}=useContext(ProdContext)    
 
  const toggleModal=()=>{     
    setModal(true)                    /*** toggle modal */
 }
 
-const handleSubmit=()=>{
+const handleSubmit=()=>
+{
    setSuccess(prevState=>!prevState)
    setModal(true)
-   
- 
+    
 }
 
     return (

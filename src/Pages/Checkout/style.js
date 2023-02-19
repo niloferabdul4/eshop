@@ -116,13 +116,13 @@ const InfoContainer=styled.div`
         align-items: flex-start;
         padding: 10px; 
         gap:20px;
-        ${mobile({ gap:'20px',padding:'10px'})}        
+        ${mobile({ gap:'20px',padding:'6px'})}        
 
 `
 const ProductTitle=styled.h3`
         font-weight: 400;
         text-align: justify;
-        ${mobile({ fontSize:'16px',wordWrap:'break-word'})}
+        ${mobile({ fontSize:'15px',wordWrap:'break-word',lineHeight:'30px'})}
 
 `
 

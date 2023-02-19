@@ -7,7 +7,6 @@ const ShoppingCart = () => {
 
     const {state:{itemCount}}=useContext(Context)
   
-     
     return (
         <ShopCart>
             <Links to ='/cart' >

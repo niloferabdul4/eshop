@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import ShoppingCart from './ShoppingCart';
 import {HiOutlineSearch}from 'react-icons/hi'
 import { useNavigate} from 'react-router-dom';
@@ -17,10 +17,7 @@ import {    HeaderContainer,
 import { Context } from '../../Context/Context';
 
 
-
-
-const Header = () => {
- 
+const Header = () => { 
     const {user}=useContext(ProdContext) 
     const {filterState:{searchText},filterDispatch}=useContext(Context)
     const navigate=useNavigate()    
@@ -32,13 +29,11 @@ const Header = () => {
     }
 
     useEffect(() => {
-
         if(!user){
            navigate('/')
         }
 
     }, [user])
-
    
    
     return (

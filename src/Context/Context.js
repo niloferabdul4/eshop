@@ -1,5 +1,4 @@
 import React,{ createContext,useContext,useEffect,useReducer} from 'react';
-import { useNavigate } from 'react-router-dom';
 import Reducer,{sumItems} from './Reducer';
 import FilterReducer from './FilterReducer';
 import { ProdContext } from './ProdContext';

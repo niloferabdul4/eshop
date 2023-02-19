@@ -55,12 +55,10 @@ const Modal = () => {
         <>    
             {modal&&
             <>
-              <Overlay></Overlay>
+              <Overlay>
            
-                           <ModalContent>
-                    
-                   
-                    <ModalInfo>{`Hello ${user.email.split('@')[0]}.....
+                <ModalContent>                  
+                   <ModalInfo>{`Hello ${user.email.split('@')[0]}.....
                                 Your Order has Confirmed... 
                                 An automated payment receipt will be sent to your email
 
@@ -72,6 +70,7 @@ const Modal = () => {
                     </CloseModalBtn>
                     <Button onClick={()=>{navigate('/')}}>Back To Home</Button>
                 </ModalContent>   
+                </Overlay>
                 </>            
             }
               

@@ -10,7 +10,6 @@ import { Image } from '../../Components/Categories/style';
 import TrendsProducts from './TrendsProducts';
 import { ProdContext } from '../../Context/ProdContext';
 import { Context } from '../../Context/Context';
-import ProductCard from '../../Components/Product/ProductCard';
 import Products from '../Products/Products';
 
 
@@ -19,7 +18,7 @@ const Home = () => {
     const navigate=useNavigate();
     const {products}=useContext(ProdContext)
     const {filterState:{searchText}}=useContext(Context)
-    
+
     const filteredProd=()=>{
         let updatedProd=products;
         if(searchText)

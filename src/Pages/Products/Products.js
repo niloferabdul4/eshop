@@ -1,4 +1,4 @@
-import React,{useContext, useEffect} from 'react';
+import React,{useContext} from 'react';
 import Filter from '../../Components/Filter/Filter';
 import {Container,ProductsSection,FilterToggle,FilterSection} from './styles';
 import { ProdContext } from '../../Context/ProdContext';
@@ -8,11 +8,10 @@ import { Context } from '../../Context/Context';
 
 const Products = () => {
   
-    const{products,setProducts,showFilters,setShowFilters}=useContext(ProdContext)   
-    const {filterState:{sort,category,maxPrice,searchText}}=useContext(Context) 
+    const{products,showFilters,setShowFilters}=useContext(ProdContext)   
+    const {filterState:{sort,category,maxPrice}}=useContext(Context) 
 
-    useEffect(()=>{setProducts(products)},[products])
-    
+       
     const updateFilter=()=>
     {     
 
