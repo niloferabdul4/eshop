@@ -1,5 +1,6 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { createContext,useState } from 'react';
+import { auth } from './Utils/firebase';
 export const ProdContext=createContext()           // create & export ProdContext //
 
 
@@ -13,6 +14,7 @@ export const ProdContext=createContext()           // create & export ProdContex
 */
 
 
+
 const ProdContextProvider = ({children}) => {
  
     const [products,setProducts]=useState([])
@@ -20,7 +22,25 @@ const ProdContextProvider = ({children}) => {
     const [showFilters,setShowFilters]=useState(false)
     const [user,setUser]=useState(null)
    
-    const toggleModal=()=>{
+      useEffect(()=>{fetch('https://fakestoreapi.com/products')
+              .then(res=>res.json())
+              .then(json=>setProducts(json))},[])
+
+   
+      
+      useEffect(() => {
+        auth.onAuthStateChanged(authUser =>{
+          if(authUser){
+            setUser(authUser)
+          }else{
+          setUser(null)
+          }
+        })
+      }, [])
+
+
+    const toggleModal=()=>
+      {
         setModal(prevModal=>!prevModal)
       }
 

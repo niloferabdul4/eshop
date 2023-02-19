@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Banner from './Banner';
 import categories_data from '../../Components/Categories/categories_data';
 import CategoryItem from '../../Components/Categories/CategoryItem';
@@ -8,18 +8,32 @@ import { CategoryTitle } from '../../Components/Categories/style';
 import {InfoContainer,Button} from '../../Components/Categories/style';
 import { Image } from '../../Components/Categories/style';
 import TrendsProducts from './TrendsProducts';
-
+import { ProdContext } from '../../Context/ProdContext';
+import { Context } from '../../Context/Context';
+import ProductCard from '../../Components/Product/ProductCard';
+import Products from '../Products/Products';
 
 
 const Home = () => {
 
     const navigate=useNavigate();
+    const {products}=useContext(ProdContext)
+    const {filterState:{searchText}}=useContext(Context)
+    
+    const filteredProd=()=>{
+        let updatedProd=products;
+        if(searchText)
+        {       
+         updatedProd=updatedProd.filter(item=>item.title.toLowerCase().includes(searchText))
+        }
+        return updatedProd;
+    }
    
-     return(
-     <>      
+     return(     <>    
        
         <HomeContainer>               
             <Banner />
+         {searchText &&<Products/>}
    {/*************  Categories Section ************** */}
 
             <Title>Categories</Title>  

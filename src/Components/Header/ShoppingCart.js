@@ -5,7 +5,7 @@ import {Context} from '../../Context/Context';
 
 const ShoppingCart = () => {
 
-    const {itemCount}=useContext(Context)
+    const {state:{itemCount}}=useContext(Context)
   
      
     return (

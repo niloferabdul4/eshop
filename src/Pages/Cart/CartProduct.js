@@ -16,9 +16,16 @@ import { CartProductContainer,
 
 const CartProduct = ({cartProd}) => {     
         const {size}=useContext(ProdContext)
-        const {removeFromCart}=useContext(Context)      
+        const {dispatch}=useContext(Context)      
         const navigate=useNavigate()
     
+        
+     const removeFromCart=(cartProd)=>{
+      dispatch({
+        type:'REMOVE_FROM_CART',
+        payload:cartProd})
+  }
+
 
         return (
         <>

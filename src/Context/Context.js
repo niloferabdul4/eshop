@@ -1,15 +1,20 @@
-import React,{ createContext,useReducer} from 'react';
+import React,{ createContext,useContext,useEffect,useReducer} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Reducer,{sumItems} from './Reducer';
+import FilterReducer from './FilterReducer';
+import { ProdContext } from './ProdContext';
+
 
 
 export const Context=createContext();
+  
+  const ContextProvider=({children})=>{   
+    
+        const {products}=useContext(ProdContext)
+   
+  
+        let localCartData=localStorage.getItem('cart')? JSON.parse(localStorage.getItem('cart')):[]   
 
-  const localCartData=localStorage.getItem('cart')?
-                      JSON.parse(localStorage.getItem('cart')):[]
-
-  const ContextProvider=({children})=>{                  
-        const navigate=useNavigate()
         const [state,dispatch]=useReducer(Reducer,{                                           /// state object that will be passed to reducer fn //////
                                                   cartItems:localCartData,
                                                   ...sumItems(localCartData),
@@ -17,63 +22,27 @@ export const Context=createContext();
                                                   modal:false
                                                    }       
                                           )        
-       
-            
-        /***** Add Item To Cart Fn ******/
+                
+        const [filterState,filterDispatch]=useReducer(FilterReducer, {                                                                      
+                                                                      sort:'asc',
+                                                                      searchText:'',
+                                                                      category:'all',
+                                                                      price:'',  
+                                                                      maxPrice:0                                                                 
 
-        const addToCart=(prod)=>
-        {
-            dispatch({
-              type:'ADD_TO_CART' ,
-              payload:prod})                                           // dispatch an object with type 'ADD ITEM' & payload //
-              navigate('/cart')
-        }
+                                                            })
 
-        const removeFromCart=(cartProd)=>{
-            dispatch({
-              type:'REMOVE_FROM_CART',
-              payload:cartProd})
-        }
+/*****  Setting the products to all_products when loading  *************/
 
-        const increaseQty=(cartProd)=>{
-          dispatch({
-                type: 'INCREASE_QTY',
-                payload:cartProd
-          })
-        }
+        useEffect(()=>{dispatch({type:'LOAD_FILTER_PRODUCTS',payload:products})},[products])  
 
-        const decreaseQty=(cartProd)=>{
-          dispatch({
-                type: 'DECREASE_QTY',
-                payload:cartProd
-          })
-        }
-    const clearItems=(cartItems)=>{
-          dispatch({
-            type:'CLEAR_ITEMS',
-            payload:cartItems
-          })
-}
-
-
-    return(
-        <>
-        <Context.Provider value={{  
-                                        cartItems:state.cartItems,
-                                        totalPrice:state.totalPrice,
-                                        itemCount:state.itemCount,
-                                        addToCart,
-                                        removeFromCart,
-                                        increaseQty,
-                                        decreaseQty,
-                                        clearItems,
-                                       
-                                        
-                                        }} >
-            {children}
-        </Context.Provider>
-        </>
-    )
+        return(
+            <>
+            <Context.Provider value={{state,dispatch,filterState,filterDispatch}} >
+                {children}
+            </Context.Provider>
+            </>
+        )
 }
 
 export default ContextProvider;

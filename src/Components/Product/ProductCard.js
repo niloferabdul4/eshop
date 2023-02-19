@@ -24,7 +24,7 @@ const ProductCard = ({prod}) => {
                         </Price> 
                         <Rating>
                             <StarRating/>
-                        </Rating>  
+                        </Rating >  
                                          
                     </InfoContainer>                   
                    <AddToCartButton prod={prod}  />    

@@ -32,7 +32,21 @@ const QtyAmount=styled.div`
 
 const QuantityContainer = ({cartProd}) => { 
 
-    const {increaseQty,decreaseQty}=useContext(Context)
+    const {dispatch}=useContext(Context)
+
+    const increaseQty=(cartProd)=>{
+        dispatch({
+              type: 'INCREASE_QTY',
+              payload:cartProd
+        })
+      }
+
+      const decreaseQty=(cartProd)=>{
+        dispatch({
+              type: 'DECREASE_QTY',
+              payload:cartProd
+        })
+      }
     return (
         <>
            <Container >

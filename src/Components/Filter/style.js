@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { mobile } from "../../Responsive";
 
 
-
 export const Title=styled.h3`
     padding: 15px;
     border:none;
@@ -29,7 +28,7 @@ export const FilterContainer=styled.div`
 export const Span =styled.span`
     width:100%;
     max-height: 600px;
-    padding: 30px;
+    padding: 20px;
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -56,6 +55,7 @@ export const FilterWrapper =styled.select`
 
 export const CategoryName=styled.option `
     font-size: 16px;
+    padding: 2px;
     ${mobile({fontSize:'14px'})}
 `
 export const Sort =styled.span`
@@ -78,13 +78,17 @@ export const SubTitle=styled.h3`
 `
 
 export const PriceRange=styled.input`
-width:100%;
+    width:100%;
 
 `
-export const RatingFilter=styled.div`
-
-width:100%;
-    
-    font-size: 16px;
-    ${mobile({fontSize:'14px',padding:'6px'})}
+export const ClearFilterButton=styled.button`
+    width:70%;
+    border-radius: 4px;
+    border:none;
+    padding: 10px;
+    font-size:1.1rem;
+    align-self: center;
+    margin:10px;
+    background-color: #2874f0;
+    color:white;
 `

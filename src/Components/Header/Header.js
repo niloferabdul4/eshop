@@ -14,16 +14,16 @@ import {    HeaderContainer,
             Links,
             Logo,SearchButton
             } from './style';
-import { FilterContext } from '../../Context/FilterContext';
+import { Context } from '../../Context/Context';
 
 
 
 
 const Header = () => {
  
-    const {user,products,setProducts}=useContext(ProdContext) 
-    const {filterState:{searchText},filterDispatch}=useContext(FilterContext)
-       const navigate=useNavigate()    
+    const {user}=useContext(ProdContext) 
+    const {filterState:{searchText},filterDispatch}=useContext(Context)
+    const navigate=useNavigate()    
 
     const handleAuthentication = () => {
         if(user){
@@ -39,31 +39,23 @@ const Header = () => {
 
     }, [user])
 
-    const searchItem=(event)=>{         
    
-        filterDispatch({type:'FILTER BY SEARCH',
-        payload:event.target.value})
-      
-       
-    }
-      
+   
     return (
         <HeaderContainer>
             <LeftWrapper>
-                    <Logo>eShop</Logo>
-                    <SearchBox > 
-                        <Form>             
-                            <Input type='search' value={searchText} onChange={searchItem}/>
-                            <SearchButton>
-                                 <HiOutlineSearch size={20} onClick={searchItem} />
-                            </SearchButton>
-                            
-                        </Form>
+              <Logo>eShop</Logo>
+                 <SearchBox > 
+                    <Form >             
+                      <Input type='search' value={searchText} onChange={(event)=>{filterDispatch({type:'FILTER BY SEARCH',
+                                    payload:event.target.value})}
+                                }/>
+                <SearchButton>
+                    <HiOutlineSearch size={20} type='button' />
+                </SearchButton>                            
+                 </Form>
                     </SearchBox>
-                 
-          
             </LeftWrapper>
-                
             <RightWrapper>
                     <Span>
                          <p>Hello.. {user?  ( `${user.email.split('@')[0]} `)  : ( 'Guest') }</p> 

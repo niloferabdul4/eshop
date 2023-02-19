@@ -8,8 +8,16 @@ import { ProdContext } from '../../Context/ProdContext';
 
 
 const Cart = () => {  
-      const {cartItems,clearItems,itemCount,totalPrice}=useContext(Context)  
+      const {state:{cartItems,itemCount,totalPrice},dispatch}=useContext(Context)  
       const {user} =useContext(ProdContext)
+
+
+      const clearItems=(cartItems)=>{
+        dispatch({
+          type:'CLEAR_ITEMS',
+          payload:cartItems
+        })
+}
            
       const navigate=useNavigate()    
       return (

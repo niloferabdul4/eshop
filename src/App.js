@@ -15,39 +15,20 @@ import ProductCard from './Components/Product/ProductCard';
 import Products from './Pages/Products/Products';
 import { lazy } from 'react';
 import { Suspense } from 'react';
-import { ProdContext } from './Context/ProdContext';  
 import Modal from './Components/OrderModal/Modal';
 import Payment from './Pages/Checkout/Payment';
-import { auth } from './Context/Utils/firebase';
 import TrendsProducts from './Pages/Home/TrendsProducts';
 
 
 const ProductsByCategoryLists = lazy(() => import('./Pages/Products/ProductByCategoryLists'));
-
-function App() {
-
-  const{setUser,setProducts,filteredProducts}=useContext(ProdContext)
-    useEffect(()=>{fetch('https://fakestoreapi.com/products')
-                  .then(res=>res.json())
-                  .then(json=>setProducts(json))},[])
-
-    useEffect(() => {
-      auth.onAuthStateChanged(authUser =>{
-        if(authUser){
-          setUser(authUser)
-        }else{
-        setUser(null)
-        }
-      })
-    }, [])
-
-  
+function App() {  
   return (  
    <Suspense fallback={<div>....Loading</div>}>
    <div className="App">                
               <Header />
               <Navbar />            
               <Routes> 
+
                     <Route path='/' element={<Home />}>                     
                        <Route path='categories' element={<Categories />}/>                                                                      
                     </Route> 
