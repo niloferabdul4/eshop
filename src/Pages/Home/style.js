@@ -183,7 +183,7 @@ const TrendsContainer=styled.div`
        transform: scale(1.10);
        ${mobile({transform: 'scale(1.10)'})}
     };
-    ${mobile({padding:'40px 15px',maxHeight:'300px',width:'260px'})}
+    ${mobile({padding:'30px 15px',maxHeight:'300px',width:'260px'})}
 
 `
 const Offer =styled.span`
@@ -204,10 +204,10 @@ const TrendsTitle=styled.p`
     margin-bottom: 20px;
     line-height: 30px;
     overflow: hidden;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-     ${mobile({fontSize:'16px'})}
+     ${mobile({fontSize:'15px'})}
 `
 
 const TrendsInfoContainer=styled.div`
@@ -227,7 +227,7 @@ const TrendsPrice=styled.div`
     justify-content: flex-start;
     gap:5px;
     margin-bottom: 15px;
-    ${mobile({marginBottom:'6px', gap:'3px',fontSize:'16px'})}
+    ${mobile({marginBottom:'6px', gap:'3px',fontSize:'15px'})}
 `
 
 const Button=styled.button`

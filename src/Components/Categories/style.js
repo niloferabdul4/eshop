@@ -35,24 +35,24 @@ import { mobile } from "../../Responsive";
                 outline: none;
                 &:hover ${InfoContainer}
                 {
-                    opacity: 1;           
+                    opacity: 1;                      
 
                 }
-                ${mobile({height:'250px', width:'180px'})}
+                ${mobile({height:'250px', width:'180px',margin:'20px'})}
 
         `
         
 
         export const CategoryTitle=styled.h3`
                 font-weight: 400;
-                font-size: 18px;
+                font-size: 17px;
                 text-transform:uppercase;
                 margin:20px;
                 display: -webkit-box;
-                -webkit-line-clamp: 2;
+                -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
-                ${mobile({fontSize:'14px',marginBottom:'20px'})}
+                ${mobile({fontSize:'16px',marginBottom:'20px'})}
 
         `
         
@@ -61,7 +61,7 @@ import { mobile } from "../../Responsive";
                 object-fit: cover; 
                 width: 100%;
                 height: 80%;
-                ${mobile({height:'70%', width:'80%'})}
+                ${mobile({height:'70%', width:'70%'})}
 
 
         `
@@ -76,7 +76,7 @@ import { mobile } from "../../Responsive";
                 cursor: pointer;
                 height: 50px;
                 width:100px; 
-                ${mobile({height:'30px', width:'50px'})}
+                ${mobile({height:'30px', width:'80px',fontSize:'0.96rem'})}
        
         `
 
