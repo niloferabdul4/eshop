@@ -50,7 +50,7 @@ export const InfoContainer=styled.div`
     display: -webkit-box;
     -webkit-box-orient: vertical;
     gap:20px;  
-    ${mobile({ padding:'16px',margin:'0px 20px'})}
+    ${mobile({ padding:'0px',margin:'8px 15px'})}
    
  
 `

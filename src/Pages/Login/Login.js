@@ -122,7 +122,7 @@ const Login = () => {
                     
                                     <Span>
                                             <Label>New User?</Label>
-                                            <NavLink to='/register'  style={{marginLeft:'10px', fontSize: '18px', color:'blue' , textDecoration:'none'}}>Create An Account</NavLink>
+                                            <NavLink to='/register'  style={{marginLeft:'10px', fontSize: '16px', color:'blue' , textDecoration:'none'}}>Create An Account</NavLink>
                                     </Span>
                       </Form>     
                                 

@@ -80,7 +80,7 @@ import { mobile } from "../../Responsive"
 `
  const Span=styled.span`
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width:100%;
 
