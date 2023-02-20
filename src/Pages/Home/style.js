@@ -53,7 +53,7 @@ const CategoriesWrapper=styled.div`
     max-width  :100% ;
     padding: 10px;
     margin-bottom: 20px;
-    ${mobile({flexDirection:"column",padding:' 10px', margin:'20px 15px 12px 15px', marginLeft:'0px'
+    ${mobile({flexDirection:"column",padding:' 10px', margin:'20px 15px 12px 15px'
    })}
 
 `
@@ -143,13 +143,12 @@ const SignInAlertBox=styled.div`
 
 const DealsWrapper=styled.div`
     margin-left: 30px;
-    margin-right: 35px;    
-    padding: 10px;
+    margin-right: 30px;    
     margin-bottom: 20px;
     z-index: 1;  
     width:100%;
     padding: 30px;
-   // ${mobile({marginLeft:'0px',marginRight:'0px'})}
+    
 `
 
 const Image=styled.img`
@@ -171,8 +170,8 @@ const TrendsContainer=styled.div`
     align-items: center;
     background-color:white;
     z-index: 1;
-    min-height: 360px;
-    height: 100%;
+    max-height: 500px;
+    height: 500px;
     width:300px;
     cursor: pointer;
     position: realtive;
@@ -182,7 +181,7 @@ const TrendsContainer=styled.div`
        transform: scale(1.10);
        ${mobile({transform: 'scale(1.10)'})}
     };
-    ${mobile({padding:'30px 15px',maxHeight:'280px',width:'260px'})}
+    ${mobile({padding:'30px 15px',maxHeight:'380px',width:'260px'})}
 
 `
 const Offer =styled.span`

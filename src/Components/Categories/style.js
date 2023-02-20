@@ -38,7 +38,7 @@ import { mobile } from "../../Responsive";
                     opacity: 1;                      
 
                 }
-                ${mobile({height:'240px', width:'170px',margin:'2px'})}
+                ${mobile({height:'240px', width:'170px',margin:'6px'})}
 
         `
         
