@@ -79,7 +79,7 @@ const RightWrapper=styled.div`
     align-items: center;
     justify-content: space-around;
     color:white;
-    ${mobile({ flex:2,gap:'2px',justifyContent:'flex-end' })}
+    ${mobile({ flex:2,gap:'2px',justifyContent:'space-around' })}
 
 `
  
