@@ -148,6 +148,8 @@ const DealsWrapper=styled.div`
     z-index: 1;  
     width:100%;
     padding: 30px;
+    background-color: blue;
+    ${mobile({ margin:'10px 0px',padding:'20px'})}   
     
 `
 
@@ -159,7 +161,7 @@ const Image=styled.img`
     min-height:140px;
     max-height: 160px;
     transition: tranform 0.1s ease-out; 
-    ${mobile({maxHeight:'160px',width:'200px', marginTop:'0px'})}
+    ${mobile({maxHeight:'100px',width:'120px', marginTop:'10px'})}
 `
 const TrendsContainer=styled.div`
     padding:40px 20px;
@@ -181,7 +183,7 @@ const TrendsContainer=styled.div`
        transform: scale(1.10);
        ${mobile({transform: 'scale(1.10)'})}
     };
-    ${mobile({padding:'30px 15px',maxHeight:'380px',width:'260px'})}
+    ${mobile({padding:'10px',maxHeight:'340px',width:'160px',margin:'0px'})}
 
 `
 const Offer =styled.span`
@@ -191,7 +193,7 @@ const Offer =styled.span`
     position: absolute;
     top: 0px;
     border-radius: 6px;
-    ${mobile({padding:'6px'})}
+    ${mobile({padding:'5px',fontSize:'13px'})}
  
 `
 const TrendsTitle=styled.p`
@@ -216,17 +218,18 @@ const TrendsInfoContainer=styled.div`
     padding: 10px;
     margin: 10px;  
     width:100%;
-    ${mobile({margin:'5px',padding:'5px'})}
+    ${mobile({margin:'0px',padding:'0px'})}
 
 `
 
 const TrendsPrice=styled.div`
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: flex-start;
     gap:5px;
     margin-bottom: 15px;
-    ${mobile({marginBottom:'6px', gap:'3px',fontSize:'15px'})}
+    ${mobile({marginBottom:'6px', gap:'3px',fontSize:'12px'})}
 `
 
 const Button=styled.button`
@@ -238,7 +241,7 @@ const Button=styled.button`
     cursor: pointer;
     height: 40px;
     width:100px;
-    ${mobile({height:'30px', width:'100px',lineHeight:'10px',fontSize:'0.75rem'})}
+    ${mobile({height:'30px', width:'80px',fontSize:'10px'})}
     
 `
 
