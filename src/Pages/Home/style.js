@@ -240,7 +240,7 @@ const Button=styled.button`
     cursor: pointer;
     height: 40px;
     width:100px;
-    ${mobile({height:'30px', width:'80px',fontSize:'10px'})}
+    ${mobile({display:'none'})}
     
 `
 
