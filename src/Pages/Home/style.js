@@ -148,7 +148,6 @@ const DealsWrapper=styled.div`
     z-index: 1;  
     width:100%;
     padding: 30px;
-    background-color: blue;
     ${mobile({ margin:'10px 0px',padding:'20px'})}   
     
 `
