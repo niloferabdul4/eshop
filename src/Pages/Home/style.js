@@ -54,7 +54,7 @@ const CategoriesWrapper=styled.div`
     padding: 10px;
     margin-bottom: 20px;
      
-    ${mobile({flexDirection:"column",padding:'20px'
+    ${mobile({flexDirection:"column",padding:'20px',margin:'0px'
    })}
 
 `
@@ -183,7 +183,7 @@ const TrendsContainer=styled.div`
        transform: scale(1.10);
        ${mobile({transform: 'scale(1.10)'})}
     };
-    ${mobile({padding:'30px 15px',maxHeight:'300px',width:'260px'})}
+    ${mobile({padding:'30px 15px',maxHeight:'280px',width:'260px'})}
 
 `
 const Offer =styled.span`
@@ -218,6 +218,7 @@ const TrendsInfoContainer=styled.div`
     padding: 10px;
     margin: 10px;  
     width:100%;
+    ${mobile({margin:'5px',padding:'5px'})}
 
 `
 

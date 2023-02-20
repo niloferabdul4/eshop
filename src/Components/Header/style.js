@@ -32,7 +32,7 @@ const Logo=styled.h2`
     align-items: center;
     margin-right: 30px;
     object-fit: contain;
-    ${mobile({ fontSize: "14px" })}
+    ${mobile({ fontSize: "14px",marginRight:'15px' })}
 
 `
 const SearchBox=styled.div`
@@ -53,7 +53,7 @@ const SearchButton=styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    ${mobile({height:'20px',padding:'2px'})}
+    ${mobile({height:'15px',padding:'2px'})}
 
 
 `
@@ -69,7 +69,7 @@ const Input=styled.input`
     border-radius: 1px;
     border:none;
     padding:10px;
-    ${mobile({width:'60px',height:'20px'})}
+    ${mobile({width:'90px',height:'20px'})}
 
 `
 const RightWrapper=styled.div`
