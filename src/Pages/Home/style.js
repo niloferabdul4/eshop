@@ -19,7 +19,7 @@ const BannerImage=styled.div `
     z-index: -1;
     margin-bottom: -400px;
     mask-image: linear-gradient(to bottom,rgb(0,0,0,1),rgb(0,0,0,0));    /* opacity bottom */
-    ${mobile({ marginBottom: '-80px'})}
+    ${mobile({ marginBottom: '-50px'})}
   `  
 
 
@@ -32,7 +32,7 @@ const HomeContainer=styled.div`
     margin-right: auto;
     height: calc(100vh-70px);
     width:100%;
-    ${mobile({padding:'0px'})}
+    ${mobile({padding:'0px',width:'100%'})}
 `
 
 const Title=styled.h2`
@@ -53,8 +53,7 @@ const CategoriesWrapper=styled.div`
     max-width  :100% ;
     padding: 10px;
     margin-bottom: 20px;
-     
-    ${mobile({flexDirection:"column",padding:'20px',margin:'0px'
+    ${mobile({flexDirection:"column",padding:' 10px', margin:'20px 15px 12px 15px', marginLeft:'0px'
    })}
 
 `
@@ -62,7 +61,7 @@ const LeftSection=styled.div`
     flex:0.8%;   
     display:flex;
     flex-direction: row;
-    ${mobile({ display: 'grid',gridTemplateColumns: 'repeat(2,1fr)'})}
+    ${mobile({ display: 'grid',flex:'1',gridTemplateColumns: 'repeat(2,1fr)',marginBottom:'20px'})}
      
     
 `

@@ -42,7 +42,7 @@ export const Title=styled.h3`
         margin-bottom: 20px;
         line-height: 36px;
         text-align: justify;
-        ${mobile({ fontSize:'18px'})}
+        ${mobile({ fontSize:'17px'})}
         
 
 `

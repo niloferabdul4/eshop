@@ -16,19 +16,7 @@ const Login = () => {
                     inputRef.current.focus();
                 },[]
             )
-                
-   /*
-    useEffect(()=>{
-
-                if ( Object.keys(formerrors).length===0 && isSubmit)
-                {
-                  setSuccess(true)
-                }
-        
-        },[formerrors])
-
-*/
-  
+ 
    const handleChange=(event)=>
    {
     const {name,value}=event.target;
@@ -38,7 +26,7 @@ const Login = () => {
    const handleSubmit=(event)=>
    { 
     event.preventDefault();
-    //setFormErrors(validate(formData));
+ 
     signInWithEmailAndPassword(auth,formData.email,formData.password)
         .then((auth)=>{  
                         if (auth)
@@ -50,41 +38,6 @@ const Login = () => {
       .catch((error)=>alert(error.message))
       
    }
-    
-/*
-   const validate=(values)=>{
-
-        const errors={};
-        const regX=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-
-        if(!values.email)     
-        {
-            errors.email='Email is required'
-        }
-           
-        else if(!regX.test(values.email))
-        {
-            errors.email='Email is invalid'
-        
-        }     
-       
-        if(!values.password)
-        {
-            errors.password='Password is required'
-        }
-        
-
-        else if (values.password.length<6)
-        {
-            errors.password='Password must be atleast 6 characters'
-
-        }
-        
-        return errors;
-     
-    }
-*/
-   
 
     return (
         <Container>           

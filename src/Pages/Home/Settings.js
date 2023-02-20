@@ -5,7 +5,7 @@ const settings={
     autoplay: true,
     infiniteLoop:true,
     autoplaySpeed: 3000,
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 600,
     slidesToShow: 5,
@@ -21,7 +21,7 @@ const settings={
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
+          dots: false
         }
       },
       {

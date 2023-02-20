@@ -27,7 +27,7 @@ import { mobile } from "../../Responsive"
     export const Description=styled.div`
         font-weight: 400;
         font-size: 20px;
-        ${mobile({ fontSize:'16px'})}
+        ${mobile({ fontSize:'15px'})}
 
         `
 
@@ -38,7 +38,7 @@ import { mobile } from "../../Responsive"
         align-items:center;
         gap:12px;
         margin: 20px;
-        ${mobile({ flexDirection:'row'})}
+        ${mobile({ flexDirection:'row',gap:'6px'})}
 
 
         `
@@ -70,4 +70,5 @@ import { mobile } from "../../Responsive"
         font-size: 1rem;
         border: none;
         transition: all 0.5s ease;
+        ${mobile({ fontSize: "0.85rem",minWidth:'150px' ,height:'30px',padding:'6px'})}
         `

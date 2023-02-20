@@ -91,4 +91,5 @@ export const ClearFilterButton=styled.button`
     margin:10px;
     background-color: #2874f0;
     color:white;
+    ${mobile({fontSize:'0.98rem'})}
 `

@@ -38,7 +38,7 @@ import { mobile } from "../../Responsive";
                     opacity: 1;                      
 
                 }
-                ${mobile({height:'240px', width:'180px',margin:'5px'})}
+                ${mobile({height:'240px', width:'170px',margin:'2px'})}
 
         `
         
@@ -52,7 +52,7 @@ import { mobile } from "../../Responsive";
                 -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
-                ${mobile({fontSize:'15px',marginBottom:'20px'})}
+                ${mobile({fontSize:'14px',margin:'20px 0px'})}
 
         `
         
@@ -61,7 +61,7 @@ import { mobile } from "../../Responsive";
                 object-fit: cover; 
                 width: 100%;
                 height: 80%;
-                ${mobile({height:'70%', width:'70%'})}
+                ${mobile({height:'70%', width:'80%'})}
 
 
         `

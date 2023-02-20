@@ -24,7 +24,7 @@ export const Wrapper=styled.div`
     width:35%;
     padding: 30px;
     margin: 400px;   
-    ${mobile({margin:'50px',padding:'20px',width:'100%'})}
+    ${mobile({margin:'35px',padding:'20px',width:'100%'})}
 `
 
 
@@ -45,6 +45,7 @@ export const InputWrapper=styled.div`
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    ${mobile({margin:'3px 0px' })}
 
  
 
@@ -54,7 +55,7 @@ export const Label=styled.label`
     font-weight: 600;
     margin: 10px 0px;
     text-align: left;  
-    ${mobile({fontSize:'15px'})} 
+    ${mobile({fontSize:'14px'})} 
 
 `
 
@@ -85,7 +86,8 @@ export const Button=styled.button`
 
 export const SignIn=styled.p`
     font-size:16px;
-    margin:10px 0px;   
+    margin:10px 0px;
+    ${mobile({ fontSize: "14px" })}   
 
 `
 
@@ -94,5 +96,6 @@ export const ErrorLabel=styled.label`
   font-size: 16px;
   color:red;
   margin-top: 10px;
+  ${mobile({ fontSize: "14px"})}
 
 `

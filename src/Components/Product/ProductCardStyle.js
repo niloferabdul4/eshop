@@ -15,7 +15,7 @@ export const ProductContainer=styled.div`
     height: 540px;
     max-width: 340px;  
     color:rgba(0,0,0,0.7);  
-    ${mobile({ height:'450px',maxWidth:'180px',margin:'0px',boxShadow:'none'})}
+    ${mobile({ minHeight:'420px',maxWidth:'180px',margin:'0px',boxShadow:'none'})}
 `
 
 export const Image=styled.img`
@@ -46,11 +46,11 @@ export const InfoContainer=styled.div`
     word-wrap: break-word;
     width:100%;
     overflow: hidden;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     gap:20px;  
-    ${mobile({ padding:'0px',margin:'8px 15px'})}
+    ${mobile({ padding:'0px',margin:'8px 10px'})}
    
  
 `

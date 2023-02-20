@@ -140,7 +140,7 @@ export const CartProductContainer=styled.div`
         display:flex;
         margin: 6px 0px;
         padding: 10px;
-        ${mobile({flexDirection:'row',minHeight:'200px',margin:'0px'})}
+        ${mobile({flexDirection:'row',minHeight:'160px',margin:'10px 0px'})}
       
 `
 
@@ -162,7 +162,7 @@ export const InfoContainer=styled.div`
         justify-content: space-between;
         //margin-left:30px; 
         padding: 20px; 
-        ${mobile({ gap:'20px',padding:'20px'})}        
+        ${mobile({ gap:'15px',padding:'15px'})}        
 
 `
 export const Info=styled.div`
@@ -188,7 +188,7 @@ export const BtnContainer=styled.div`
 export const ProductTitle=styled.h3`
         font-weight: 400;
         text-align: justify;
-        ${mobile({ fontSize:'16px',wordWrap:'break-word',fontSize:'16px',lineHeight:'30px'})}
+        ${mobile({ fontSize:'16px',wordWrap:'break-word',lineHeight:'30px'})}
 
 `
 export const Price=styled.div`

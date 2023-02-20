@@ -23,7 +23,7 @@ import { mobile } from "../../Responsive"
     background-color: white;
     width:25%;
     padding: 30px;
-    ${mobile({margin:'10px 50px',padding:'20px',width:'80%'})} 
+    ${mobile({margin:'35px',padding:'20px',width:'80%'})} 
     
 `
 
