@@ -70,7 +70,7 @@ const Input=styled.input`
     border-radius: 1px;
     border:none;
     padding:10px;
-    ${mobile({width:'70px',height:'15px'})}
+    ${mobile({width:'60px',height:'15px'})}
 
 `
 const RightWrapper=styled.div`
@@ -79,7 +79,7 @@ const RightWrapper=styled.div`
     align-items: center;
     justify-content: space-around;
     color:white;
-    ${mobile({ flex:2,gap:'2px',justifyContent:'space-around' })}
+    ${mobile({ flex:2,gap:'1px',justifyContent:'space-around' })}
 
 `
  
@@ -109,7 +109,7 @@ const ShopCart=styled.div`
     align-items: center;
     //margin-left: 20px; 
     position: relative;
-    ${mobile({ marginLeft:'5px'})}
+    ${mobile({ marginLeft:'2px'})}
 
 `
 

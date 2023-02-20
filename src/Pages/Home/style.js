@@ -148,7 +148,7 @@ const DealsWrapper=styled.div`
     z-index: 1;  
     width:100%;
     padding: 30px;
-    ${mobile({ margin:'10px 0px',padding:'20px'})}   
+    ${mobile({ margin:'10px 0px',padding:'10px'})}   
     
 `
 
@@ -182,7 +182,7 @@ const TrendsContainer=styled.div`
        transform: scale(1.10);
        ${mobile({transform: 'scale(1.10)'})}
     };
-    ${mobile({padding:'10px',maxHeight:'340px',width:'160px',margin:'0px'})}
+    ${mobile({padding:'10px',maxHeight:'340px',width:'150px',margin:'4px'})}
 
 `
 const Offer =styled.span`
@@ -206,7 +206,7 @@ const TrendsTitle=styled.p`
     -webkit-line-clamp: 3;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-     ${mobile({fontSize:'15px'})}
+     ${mobile({fontSize:'14px'})}
 `
 
 const TrendsInfoContainer=styled.div`
