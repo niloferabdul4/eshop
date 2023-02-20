@@ -9,6 +9,7 @@ export const ProductContainer=styled.div`
         width:100%;
         padding:60px;
         color:rgba(0,0,0,0.74);
+        background-color: white;;
         ${mobile({ flexDirection:'column',padding:'0px',margin:'0px'})}
        
 
