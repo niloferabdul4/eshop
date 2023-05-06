@@ -146,7 +146,7 @@ const Register = () => {
                         </InputWrapper>
                         <InputWrapper>
                                 <Label htmlFor='pwd'>Password</Label>
-                                <Input type='text' 
+                                <Input type='password' 
                                         id='pwd'
                                         placeholder='Password'
                                         value={formData.Password}
