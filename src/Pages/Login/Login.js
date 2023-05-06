@@ -60,7 +60,7 @@ const Login = () => {
                                     </InputWrapper>
                                     <InputWrapper>
                                             <Label html='password'>Password</Label>
-                                            <Input type='text' 
+                                            <Input type='password' 
                                             placeholder='Password'  
                                             value={formData.password} 
                                             name='password'
