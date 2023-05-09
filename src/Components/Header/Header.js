@@ -1,6 +1,7 @@
 import React from 'react';
 import ShoppingCart from './ShoppingCart';
 import {HiOutlineSearch}from 'react-icons/hi'
+import { signOut } from 'firebase/auth';
 import { useNavigate} from 'react-router-dom';
 import { useContext,useEffect} from 'react';
 import { ProdContext } from '../../Context/ProdContext';
@@ -22,11 +23,13 @@ const Header = () => {
     const {filterState:{searchText},filterDispatch}=useContext(Context)
     const navigate=useNavigate()    
 
-    const handleAuthentication = () => {
+    const logoutFn = () => {
         if(user){
-            auth.signOut();
+            signOut(auth);
+            navigate('/login')
         }
     }
+    
 
     useEffect(() => {
         if(!user){
@@ -54,10 +57,20 @@ const Header = () => {
             <RightWrapper>
                     <Span>
                          <p>Hello.. {user?  ( `${user.email.split('@')[0]} `)  : ( 'Guest') }</p> 
-                         <h4 onClick={handleAuthentication}>{user? 'Sign Out' : 'Sign In'}</h4>                       
+                                         
                     </Span>
-                    <Links to='register' >Register</Links>
-                    <Links to ='login'  >Login</Links>
+
+                    {!user?
+                    (
+                    <>
+                    <Links to='login'>Login</Links>
+                    <Links to='register'>Register</Links>
+                    </>
+                    )
+                    :
+                    (<Links  to='login' onClick={logoutFn}>Logout</Links>)
+                   }                                   
+                   
                     <ShoppingCart />                                            
             </RightWrapper> 
         </HeaderContainer>            

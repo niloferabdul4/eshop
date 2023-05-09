@@ -32,7 +32,7 @@ const Logo=styled.h2`
     align-items: center;
     margin-right: 30px;
     object-fit: contain;
-    ${mobile({ fontSize: "14px",marginRight:'15px' })}
+    ${mobile({ fontSize: "14px",marginRight:'2px' })}
 
 `
 const SearchBox=styled.div`
@@ -54,7 +54,7 @@ const SearchButton=styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    ${mobile({height:'20px',padding:'6px'})}
+    ${mobile({height:'20px',padding:'10px 10px'})}
 
 
 `
@@ -70,7 +70,7 @@ const Input=styled.input`
     border-radius: 1px;
     border:none;
     padding:10px;
-    ${mobile({width:'60px',height:'15px'})}
+    ${mobile({width:'90px',height:'15px'})}
 
 `
 const RightWrapper=styled.div`
@@ -109,7 +109,7 @@ const ShopCart=styled.div`
     align-items: center;
     //margin-left: 20px; 
     position: relative;
-    ${mobile({ marginLeft:'2px'})}
+    ${mobile({ marginLeft:'0px'})}
 
 `
 
@@ -131,7 +131,7 @@ const Links=styled(NavLink)`
     font-size: 18px;
     text-decoration: none;
     color:white;
-    ${mobile({ fontSize:'14px',marginLeft: "20px",gap:'0px' })}
+    ${mobile({ fontSize:'13px',marginLeft: "15px",gap:'0px' })}
     
     
 `
