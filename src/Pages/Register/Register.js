@@ -4,6 +4,9 @@ import {NavLink,useNavigate} from 'react-router-dom';
 import { RegisterContainer,Wrapper,Title,Form,InputWrapper,Label,Input,ErrorLabel,Button,SignIn} from './registerstyles';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../Context/Utils/firebase';
+import { ToastContainer,toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Register = () => {
 
   /********   useStates  **********/      

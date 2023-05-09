@@ -8,7 +8,7 @@ import Modal from '../../Components/OrderModal/Modal';
 
 
 const Payment = () => {
- const {state:{cartItems,totalPrice}}=useContext(Context)
+ const {state:{cartItems,totalPrice,itemCount},dispatch}=useContext(Context)
  const [success,setSuccess]=useState(false)
  const {setModal,user}=useContext(ProdContext)    
 
@@ -20,13 +20,15 @@ const handleSubmit=()=>
 {
    setSuccess(prevState=>!prevState)
    setModal(true)
+   dispatch({type:'CLEAR_ITEMS'})
+ 
     
 }
 
     return (
         <>       
             <PaymentContainer> 
-                <h2> Checkout ({cartItems?.length} items)</h2>                
+                <h2> Checkout ({cartItems?.length} items)</h2>             
                 <PaymentSection>
                         <PaymentTitle>
                             Delivery Address
@@ -56,7 +58,7 @@ const handleSubmit=()=>
                         </PaymentTitle>
                      </PaymentSection>
                     <OrderContainer>  
-                                     
+                              
                         <PaymentDetails> 
                              <>
                              <h2> {`Order Total : $${totalPrice.toFixed(2)}`} </h2> 
@@ -66,11 +68,9 @@ const handleSubmit=()=>
                              {!success &&<Button onClick={handleSubmit}>Pay</Button>}
                              </>                   
                              
-                        </PaymentDetails>                                                                    
+                        </PaymentDetails>                                                                  
                         
-                    </OrderContainer>
-           
-
+                    </OrderContainer>                   
                  {success &&
               <Modal toggleModal={toggleModal}/>  
 }                
