@@ -53,7 +53,7 @@ const CategoriesWrapper=styled.div`
     max-width  :100% ;
     padding: 10px;
     margin-bottom: 20px;
-    ${mobile({flexDirection:"column",padding:' 10px', margin:'20px 15px 12px 15px'
+    ${mobile({flexDirection:"column",padding:' 10px', margin:'20px 0px 12px 0px'
    })}
 
 `

@@ -10,9 +10,8 @@ import { mobile } from "../../Responsive"
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height:25vh;
-       
-
+        height:25vh;       
+        ${mobile({ margin:'0px'})}
         `
 
     export const Title=styled.div`
