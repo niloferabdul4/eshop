@@ -131,8 +131,7 @@ const Links=styled(NavLink)`
     font-size: 18px;
     text-decoration: none;
     color:white;
-    ${mobile({ fontSize:'13px',marginLeft: "15px",gap:'0px' })}
-    
+    ${mobile({ fontSize:'13px',marginLeft: "15px",gap:'0px' })}    
     
 `
 
