@@ -230,7 +230,7 @@ export const Amount=styled.div`
        margin:0px 4px;
        border:1px solid teal;
        border-radius: 8px;
-
+       ${mobile({ padding:'6px'})}   
 `
 
 export const Total=styled.div`

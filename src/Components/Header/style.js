@@ -14,7 +14,8 @@ const HeaderContainer=styled.div`
     top:0;
     z-index: 100;
     ${mobile({ height:'50px', margin:'0px',width:'100%'})}   
- 
+  
+   
 `
 
 const LeftWrapper=styled.div`
@@ -80,7 +81,7 @@ const RightWrapper=styled.div`
     justify-content: space-around;
     color:white;
     ${mobile({ flex:2,gap:'1px',justifyContent:'space-around' })}
-
+    
 `
  
 const Span=styled.span`
@@ -100,7 +101,7 @@ const Span=styled.span`
         font-size:18px;
        
     }
-
+   
 `
 
 const ShopCart=styled.div`
@@ -110,6 +111,7 @@ const ShopCart=styled.div`
     //margin-left: 20px; 
     position: relative;
     ${mobile({ marginLeft:'0px'})}
+  
 
 `
 
@@ -132,6 +134,7 @@ const Links=styled(NavLink)`
     text-decoration: none;
     color:white;
     ${mobile({ fontSize:'13px',marginLeft: "15px",gap:'0px' })}    
+    
     
 `
 

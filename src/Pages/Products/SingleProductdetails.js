@@ -57,7 +57,7 @@ const SingleProductdetails = () => {
                         <Description>{singleProduct.description}</Description>
 
                     <FilterContainer /> 
-                    <Span style={{display:'flex',justifyContent:'space-evenly',alignItems:'center',width:'100%'}}>                           
+                    <Span style={{display:'flex',justifyContent:'space-evenly',alignItems:'center',width:'100%'}}>                          
                           
                             <AddToCartButton prod={singleProduct} />    
                             <Button onClick={()=>{navigate('/login')}}>Buy Now</Button>

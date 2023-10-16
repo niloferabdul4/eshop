@@ -16,7 +16,7 @@ import { mobile } from "../../Responsive";
                 background-color: rgba(0,0,0,0.1);
                 transition: all 0.5s ease;
                 color:rgba(0,0,0,0.7);
-                ${mobile({ padding: "10px" })}
+                ${mobile({ padding: "1" })}
         `
         
 
@@ -39,6 +39,7 @@ import { mobile } from "../../Responsive";
 
                 }
                 ${mobile({height:'240px', width:'170px',margin:'6px'})}
+               
 
         `
         

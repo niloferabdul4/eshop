@@ -9,13 +9,13 @@ import FilterToggle from '../FilterToggle/FilterToggle';
 
 const ProductsContainer=styled.div`
     display:grid;
-    grid-template-columns: repeat(4,1fr);                 
-    gap:15px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));           
+    gap:10px;
     justify-content: center;    
     padding:10px; 
     margin:60px;
     background-color:rgb(234,237,237);
-    ${mobile({margin:'0px'})}
+    ${mobile({margin:'0px',margin:'20px 0px'})}
 `
 
 

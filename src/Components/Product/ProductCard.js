@@ -1,6 +1,6 @@
 import React from 'react';
 import StarRating from '../Rating/Rating';
-import {ProductContainer,Image,Title,InfoContainer,Price,Rating}from './ProductCardStyle';
+import {ProductContainer,Image,Title,InfoContainer,Price,Rating,BtnContainer}from './ProductCardStyle';
 //import { useParams } from 'react-router-dom';
 import {useNavigate } from 'react-router-dom';
 import AddToCartButton from '../AddToCart Button/AddToCartButton';
@@ -8,6 +8,10 @@ import AddToCartButton from '../AddToCart Button/AddToCartButton';
 const ProductCard = ({prod}) => { 
 
     const navigate=useNavigate();
+
+      
+
+    
     //const {id}=useParams()
 
  // const [products,setProducts]=useState({})
@@ -16,8 +20,9 @@ const ProductCard = ({prod}) => {
                 <ProductContainer >                       
                     
                     <Image src={prod.image} alt='' role='button' onClick={()=>{navigate(`/products/${prod.id}`)}}/>                      
-                    <Title>{prod.title}</Title>
-                    <InfoContainer>                        
+                    
+                    <InfoContainer>   
+                        <Title>{prod.title}</Title>                     
                         <Price> 
                             <small>$</small>
                             <h3><strong>{prod.price.toFixed(2)}</strong> </h3>                                        
@@ -26,8 +31,11 @@ const ProductCard = ({prod}) => {
                             <StarRating/>
                         </Rating >  
                                          
-                    </InfoContainer>                   
-                   <AddToCartButton prod={prod}  />    
+                    </InfoContainer>  
+                   
+                        <AddToCartButton prod={prod}  />   
+                                  
+                   
               
                 </ProductContainer>        
         

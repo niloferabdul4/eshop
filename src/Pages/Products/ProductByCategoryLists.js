@@ -13,7 +13,7 @@ const ProductsContainer=styled.div`
     justify-content: center;    
     padding:10px; 
     margin:60px;
-    ${mobile({display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:'0px',margin:'0px',padding:'0px'})}
+    ${mobile({display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:'0px',margin:'0px',padding:'0px',gap:'10px'})}
    
 `
 
