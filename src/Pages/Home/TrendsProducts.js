@@ -15,7 +15,7 @@ const TrendsProducts = () => {
     const OfferPercent=['Upto 50%','Upto 25%','Upto 75%','Upto 10%','Upto 15%','Upto 40%','Upto 80%','Upto 60%','Upto 70%']
  
    useEffect(()=>{
-        if(products===[]){
+        if(products===null){
             <p>Loading...</p>
         }
         else{

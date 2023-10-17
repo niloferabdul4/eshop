@@ -1,5 +1,4 @@
 import React,{useState,useEffect,useContext} from 'react';
-import { ProdContext } from '../../Context/ProdContext';
 import { useLocation } from 'react-router-dom';
 import ProductCard from '../../Components/Product/ProductCard';
 import styled from 'styled-components';
@@ -8,12 +7,19 @@ import { mobile } from '../../Responsive';
 
 const ProductsContainer=styled.div`
     display:grid;
-    grid-template-columns: repeat(4,1fr);                 
-    gap:15px;
+    grid-template-columns: repeat(auto-fit,minmax(380px,1fr));   
+    grid-template-rows: repeat(auto-fit,minmax(600px,1fr));           
+    grid-column-gap:10px;
+    grid-row-gap: 60px;
     justify-content: center;    
-    padding:10px; 
+    padding: 40px 30px; 
     margin:60px;
-    ${mobile({display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:'0px',margin:'0px',padding:'0px',gap:'10px'})}
+    ${mobile({display:'grid',
+        gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',
+        gridTemplateRows:'repeat(auto-fit,minmax(420px,1fr))',
+        gridColumnGap:'1px',
+        gridRowGap:'20px',
+        margin:'0px',padding:'10px 8px'})}
    
 `
 

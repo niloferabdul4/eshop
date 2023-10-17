@@ -1,26 +1,30 @@
 import styled from "styled-components"
 import { mobile } from "../../Responsive"
 export const ProductContainer=styled.div`
-    padding:20px;
+    padding:36px 25px;
     margin:20px;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     border:0.5px solid lightgrey;
-    //box-shadow: rgba(53, 48, 48, 0.15) 1.95px 1.95px 2px;
+    box-shadow: rgba(53, 48, 48, 0.15) 1.95px 1.95px 2px;
     background-color: white;
     z-index: 1;
-    width: 100%;
-    height: 540px;
-    max-width: 340px;  
+    max-height: 600px;
+    max-width: 380px;  
+    cursor:pointer;
     color:rgba(0,0,0,0.7);  
-    ${mobile({ maxHeight:'400px',maxWidth:'180px',margin:'10px 0px',boxShadow:'none'})}
+    &:hover{
+        transform: scale(1.03);
+        transition: all ease 0.3s;
+    }
+    ${mobile({ maxHeight:'4400px',maxWidth:'200px',margin:'10px 0px',boxShadow:'none',padding:'10px  5px'})}
 `
 
 export const Image=styled.img`
-    object-fit: cover;
-    margin-bottom: 30px;
+    object-fit: contain;
+    margin-bottom: 10px;
     width:100%;
     max-height:200px; 
     ${mobile({ width:'140px',height:'140px',marginBottom:'2px'})}
@@ -28,11 +32,11 @@ export const Image=styled.img`
 
 export const Title=styled.h3`
     font-weight: 500;
-    font-size: 19px;
+    font-size: 20px;
     font-family: 'Roboto';    
     text-align: justify;
     margin-bottom: 10px;
-    line-height: 30px;
+    line-height: 1.6;
     ${mobile({ fontSize:'15px', fontWeight: '400',marginBottom:'4px'})}
   
 `
@@ -41,14 +45,12 @@ export const InfoContainer=styled.div`
     display:flex;   
     justify-content:center;
     align-items: flex-start;
-    padding: 10px;
-    //margin: 0px 40px;  
     width:100%;
     overflow: hidden;
     -webkit-line-clamp: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    gap:20px;  
+    gap:10px;  
     ${mobile({ padding:'0px',margin:'8px 0px',gap:'4px'})}
    
  

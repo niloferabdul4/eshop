@@ -85,7 +85,7 @@ export const Span=styled.span`
 
 `
 export const Button=styled.button`
-    height:50px;
+    height:48px;
     width:300px;
     border-radius: 6px;
     background-color: ${props=>props.id=='cart'? '#2874f0' : 'orange'} ;

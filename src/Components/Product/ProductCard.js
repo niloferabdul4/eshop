@@ -22,7 +22,7 @@ const ProductCard = ({prod}) => {
                     <Image src={prod.image} alt='' role='button' onClick={()=>{navigate(`/products/${prod.id}`)}}/>                      
                     
                     <InfoContainer>   
-                        <Title>{prod.title}</Title>                     
+                        <Title>{prod.title}</Title>                  
                         <Price> 
                             <small>$</small>
                             <h3><strong>{prod.price.toFixed(2)}</strong> </h3>                                        
@@ -31,12 +31,8 @@ const ProductCard = ({prod}) => {
                             <StarRating/>
                         </Rating >  
                                          
-                    </InfoContainer>  
-                   
+                    </InfoContainer>                     
                         <AddToCartButton prod={prod}  />   
-                                  
-                   
-              
                 </ProductContainer>        
         
    </>

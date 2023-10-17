@@ -2,14 +2,16 @@ import styled from "styled-components";
 import { mobile } from "../../Responsive";
 
 export const Container=styled.div`
+  
     display:flex;
     flex-direction: row;
-    height:100%;
+    overflow-y: scroll;
     width:100%;
     z-index: 1;
     margin-left: auto;
     margin-right:auto;
-    background-color: lightgrey;;
+    background-color: lightgrey;
+  
     ${mobile({flexDirection:'column-reverse',margin:'0px',})}
   
   
@@ -31,16 +33,25 @@ export const FilterToggle=styled.div`
 
 `
 export const ProductsSection=styled.div`
+    height: 100%;
     flex:0.75;
     display:grid;
-    grid-template-columns: repeat(3,1fr);                 
-    gap:10px;
+    grid-template-columns: repeat(auto-fit,minmax(380px,1fr));   
+    grid-template-rows: repeat(auto-fit,minmax(600px,1fr));           
+    grid-column-gap:10px;
+    grid-row-gap: 60px;
     justify-content: center; 
-    padding: 20px;
+    padding: 40px 30px;
     box-shadow: rgba(53, 48, 48, 0.15) 1.95px 1.95px 2.6px;
     color:rgba(0,0,0,0.7); 
     margin : 10px; 
-    ${mobile({gridTemplateColumns:'repeat(2,1fr)', gap:'0px',margin:'0px'})}
+    ${mobile({
+        flex:'1',
+        gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',
+        gridTemplateRows:'repeat(auto-fit,minmax(420px,1fr))',
+        gridColumnGap:'1px',
+        gridRowGap:'20px',
+        margin:'0px',padding:'10px 8px'})}
     
 `
 
