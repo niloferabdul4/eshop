@@ -20,7 +20,7 @@ const StarRating = () => {
             {Array(rating)
                     .fill()
                     .map((_,i)=>(
-                                       <AiFillStar key={i} color='gold' size={22} />
+                                       <AiFillStar key={i} color='gold' size={20} />
                                
                                 ))} 
                                             

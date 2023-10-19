@@ -37,7 +37,6 @@ const Home = () => {
 
             <Title>Categories</Title>  
             <CategoriesWrapper> 
-
                 <LeftSection>                 
                 {categories_data.map(item=>{return <CategoryItem key={item.id} categoryItem={item}                                                                          
             

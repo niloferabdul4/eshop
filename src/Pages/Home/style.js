@@ -12,7 +12,7 @@ const BannerContainer=styled.div `
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
-    ${mobile({ flex:0.2,width:'380px'})}
+    ${mobile({ flex:0.2,width:'100%'})}
 `
 
 const BannerImage=styled.div `
@@ -32,7 +32,7 @@ const HomeContainer=styled.div`
     margin-right: auto;
     height: calc(100vh-70px);
     width:100%;
-    ${mobile({padding:'0px',width:'100%'})}
+    ${mobile({padding:'0px',width:'100%' ,margin:'0px'})}
 `
 
 const Title=styled.h2`
@@ -48,12 +48,10 @@ const CategoriesWrapper=styled.div`
     justify-content: center;
     align-items: center;
     z-index: 1;      
-    margin-left: 25px;
-    margin-right: 25px;  
-    max-width  :100% ;
+    margin: 25px 0px 25px 20px;  
+    width  :100% ;
     padding: 10px;
-    margin-bottom: 20px;
-    ${mobile({flexDirection:"column",padding:' 10px', margin:'20px 0px 12px 0px'
+    ${mobile({flexDirection:"column",alignItems:'center',padding:'6px 0px', margin:'20px 0px 12px 0px',width:'100%'
    })}
 
 `
@@ -61,7 +59,12 @@ const LeftSection=styled.div`
     flex:0.8%;   
     display:flex;
     flex-direction: row;
-    ${mobile({ display: 'grid',flex:'1',gridTemplateColumns: 'repeat(2,1fr)',marginBottom:'20px'})}
+    ${mobile({ display: 'grid',
+    flex:'1',
+    gridTemplateColumns: 'repeat(2,1fr)',
+    gridColumnGap:'15px',
+    gridTemplateRows: 'repeat(2,1fr)',gridRowGap:'10px',
+    margin:'1em 0.2em'})}
      
     
 `
@@ -84,7 +87,7 @@ const AllContainer=styled.div`
           opacity: 1;           
 
         }
-        ${mobile({height:'250px',width:'320px',margin:'auto '})}
+        ${mobile({height:'250px',width:'320px',margin:'1em 2em'})}
 
         `
 
@@ -112,7 +115,7 @@ const SignInButton=styled.div`
         justify-content:center ;
         margin-left:auto;
         margin-right: auto;
-        ${mobile({height:'30px',fontSize:'0.85rem'})} 
+        ${mobile({height:'30px',fontSize:'0.85rem',margin:'10px auto'})} 
             
         
 `  
@@ -127,7 +130,7 @@ const SignInAlertBox=styled.div`
         border-radius: 8px;
         background-color: white;
         gap:15px;
-        ${mobile({ padding:'15px',gap:'6px'})}   
+        ${mobile({ padding:'15px',gap:'10px',margin:'18px'})}   
 `       
 
  const Text=styled.h2`       
@@ -148,7 +151,7 @@ const DealsWrapper=styled.div`
     z-index: 1;  
     width:100%;
     padding: 30px;
-    ${mobile({ margin:'10px 0px',padding:'10px'})}   
+    ${mobile({ margin:'15px 6px',padding:'5px'})}   
     
 `
 
@@ -160,7 +163,7 @@ const Image=styled.img`
     min-height:140px;
     max-height: 160px;
     transition: tranform 0.1s ease-out; 
-    ${mobile({maxHeight:'100px',width:'120px', marginTop:'10px'})}
+    ${mobile({maxHeight:'100px',width:'120px', marginTop:'8px'})}
 `
 const TrendsContainer=styled.div`
     padding:30px 20px;
@@ -182,7 +185,7 @@ const TrendsContainer=styled.div`
        transform: scale(1.10);
        ${mobile({transform: 'scale(1.10)'})}
     };
-    ${mobile({padding:'10px 8px',maxHeight:'340px',width:'150px',margin:'2px'})}
+    ${mobile({padding:'10px 8px',maxHeight:'340px',width:'180px',margin:'5px'})}
 
 `
 const Offer =styled.span`

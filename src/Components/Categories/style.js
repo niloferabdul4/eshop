@@ -33,12 +33,13 @@ import { mobile } from "../../Responsive";
                 position: relative;  
                 border:none;
                 outline: none;
+                
                 &:hover ${InfoContainer}
                 {
                     opacity: 1;                      
 
                 }
-                ${mobile({height:'240px', width:'170px',margin:'6px'})}
+                ${mobile({height:'240px', width:'170px',margin:'4px'})}
                
 
         `

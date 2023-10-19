@@ -16,7 +16,7 @@ const Container=styled.div`
         border:0.2px solid lightgrey;
         width:200px;
         background-color:rgba(0,0,0,0.04);  
-        ${mobile({ width:'140px',fontSize:'0.85rem',margin:'0px'})}
+        ${mobile({ width:'140px',fontSize:'0.80rem',margin:'0px'})}
         
         
 `

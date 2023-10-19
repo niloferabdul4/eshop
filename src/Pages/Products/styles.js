@@ -47,11 +47,11 @@ export const ProductsSection=styled.div`
     margin : 10px; 
     ${mobile({
         flex:'1',
-        gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',
-        gridTemplateRows:'repeat(auto-fit,minmax(420px,1fr))',
+        gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',
+        gridTemplateRows:'repeat(auto-fit,minmax(360px,1fr))',
         gridColumnGap:'1px',
-        gridRowGap:'20px',
-        margin:'0px',padding:'10px 8px'})}
+        gridRowGap:'10px',
+        margin:'0px',padding:'10px 4px'})}
     
 `
 

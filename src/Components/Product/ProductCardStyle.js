@@ -19,7 +19,7 @@ export const ProductContainer=styled.div`
         transform: scale(1.03);
         transition: all ease 0.3s;
     }
-    ${mobile({ maxHeight:'4400px',maxWidth:'200px',margin:'10px 0px',boxShadow:'none',padding:'10px  5px'})}
+    ${mobile({ maxHeight:'360px',maxWidth:'170px',margin:'10px 0px',boxShadow:'none',padding:'10px  4px'})}
 `
 
 export const Image=styled.img`
