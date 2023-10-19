@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { mobile } from "../../Responsive";
+import { tab } from "../../Responsive";
 
      export const InfoContainer = styled.div`
                 opacity:0;
@@ -39,7 +40,8 @@ import { mobile } from "../../Responsive";
                     opacity: 1;                      
 
                 }
-                ${mobile({height:'240px', width:'170px',margin:'4px'})}
+                ${mobile({height:'240px', width:'150px',margin:'1px',padding:'0.1px'})}
+                 ${tab({height:'300px', width:'170px',margin:'10px 4px',padding:'10px'})}
                
 
         `
@@ -60,11 +62,11 @@ import { mobile } from "../../Responsive";
         
 
         export const Image=styled.img`
-                object-fit: cover; 
+                object-fit: contain; 
                 width: 100%;
                 height: 80%;
-                ${mobile({height:'70%', width:'80%'})}
-
+                ${mobile({height:'70%', width:'100%'})}
+                ${tab({height:'70%',width:'100%'})}
 
         `
         

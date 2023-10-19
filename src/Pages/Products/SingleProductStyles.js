@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { mobile } from "../../Responsive";
-
+import { tab } from "../../Responsive";
 export const ProductContainer=styled.div`
         display: flex;
         justify-content: center;
@@ -95,7 +95,8 @@ export const Button=styled.button`
     cursor: pointer;
     align-items: center;
     font-weight: 400; 
-    ${mobile({ width:'120px',height:'40px',fontSize:'0.95rem',margin:'0px 20px'})}
+    ${mobile({ width:'140px',height:'35px',fontSize:'0.92rem',margin:'0px 20px'})}
+    ${tab({ width:'160px',height:'40px',fontSize:'0.98rem',margin:'0px 20px'})}
 
 `
 

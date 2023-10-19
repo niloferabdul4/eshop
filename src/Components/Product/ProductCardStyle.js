@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { mobile } from "../../Responsive"
+import { tab } from "../../Responsive"
 export const ProductContainer=styled.div`
     padding:36px 25px;
     margin:20px;
@@ -19,7 +20,8 @@ export const ProductContainer=styled.div`
         transform: scale(1.03);
         transition: all ease 0.3s;
     }
-    ${mobile({ maxHeight:'360px',maxWidth:'170px',margin:'10px 0px',boxShadow:'none',padding:'10px  4px'})}
+    ${mobile({ maxHeight:'360px',maxWidth:'190px',margin:'10px 0px',boxShadow:'none',padding:'10px'})}
+    ${tab({ maxHeight:'360px',maxWidth:'190px',margin:'10px 0px',boxShadow:'none',padding:'10px'})}
 `
 
 export const Image=styled.img`
@@ -27,7 +29,8 @@ export const Image=styled.img`
     margin-bottom: 10px;
     width:100%;
     max-height:200px; 
-    ${mobile({ width:'140px',height:'140px',marginBottom:'2px'})}
+    ${mobile({ width:'130px',height:'140px',marginBottom:'2px'})}
+    ${tab({ width:'150px',height:'160px',marginBottom:'2px'})}
     `
 
 export const Title=styled.h3`

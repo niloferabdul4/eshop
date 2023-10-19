@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {InfoContainer} from '../../Components/Categories/style';
 import { mobile } from "../../Responsive";
-
+import { tab } from "../../Responsive";
 /************  BANNER STYLING    ****************/
 
 
@@ -19,7 +19,8 @@ const BannerImage=styled.div `
     z-index: -1;
     margin-bottom: -400px;
     mask-image: linear-gradient(to bottom,rgb(0,0,0,1),rgb(0,0,0,0));    /* opacity bottom */
-    ${mobile({ marginBottom: '-50px'})}
+    ${mobile({ marginBottom: '-60px'})}
+    ${tab({ marginBottom: '-100px'})}
   `  
 
 
@@ -48,10 +49,12 @@ const CategoriesWrapper=styled.div`
     justify-content: center;
     align-items: center;
     z-index: 1;      
-    margin: 25px 0px 25px 20px;  
+    margin: 25px 20px 25px 20px;  
     width  :100% ;
-    padding: 10px;
-    ${mobile({flexDirection:"column",alignItems:'center',padding:'6px 0px', margin:'20px 0px 12px 0px',width:'100%'
+    padding: 20px 100px;
+    ${mobile({flexDirection:"column",alignItems:'center',padding:'6px 0px', margin:'20px 0px 20px 0px',width:'100%'
+   })}
+  ${tab({flexDirection:"column",alignItems:'center',padding:'6px 10px', margin:'30px 0px',width:'100%'
    })}
 
 `
@@ -65,7 +68,7 @@ const LeftSection=styled.div`
     gridColumnGap:'15px',
     gridTemplateRows: 'repeat(2,1fr)',gridRowGap:'10px',
     margin:'1em 0.2em'})}
-     
+      ${tab({margin:'0px',flex:'1'})} 
     
 `
 
@@ -76,7 +79,7 @@ const AllContainer=styled.div`
     align-items:center;
     height: 320px;
     width: 400px;
-    margin:6px;
+    margin:20px 60px;
     padding:0px;
     background-color: white;
     position: relative;  
@@ -88,7 +91,7 @@ const AllContainer=styled.div`
 
         }
         ${mobile({height:'250px',width:'320px',margin:'1em 2em'})}
-
+        ${tab({height:'350px',width:'380px',margin:'2em 2em'})}
         `
 
 const RightSection=styled.div`
@@ -96,8 +99,9 @@ const RightSection=styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    //margin-right: 50px;
     ${mobile({ display: 'flex',flexDirection:'column' ,justifyContent:'center'})}
-
+    ${tab({flex:'1' })}
 
 `
 
@@ -124,13 +128,14 @@ const SignInAlertBox=styled.div`
         flex-direction: column; 
         justify-content:center;
         border:none;
-        margin-top: 20px;
+        margin: 20px 60px;
         padding: 20px;
         max-height: 30vh;
         border-radius: 8px;
         background-color: white;
         gap:15px;
-        ${mobile({ padding:'15px',gap:'10px',margin:'18px'})}   
+        ${mobile({ padding:'15px',gap:'15px',margin:'30px'})}   
+        ${tab({ padding:'20px',gap:'20px',margin:'40px'})}   
 `       
 
  const Text=styled.h2`       
@@ -145,14 +150,12 @@ const SignInAlertBox=styled.div`
 /***********  TRENDS  STYLING    **************/
 
 const DealsWrapper=styled.div`
-    margin-left: 30px;
-    margin-right: 30px;    
-    margin-bottom: 20px;
+    margin: 30px;
     z-index: 1;  
     width:100%;
     padding: 30px;
-    ${mobile({ margin:'15px 6px',padding:'5px'})}   
-    
+    ${mobile({ margin:'20px 0px',padding:' 8px 0px',width:'100%'})}   
+     ${tab({ margin:'35px 0px',padding:'8px 0px',width:'100%'})}    
 `
 
 const Image=styled.img`
@@ -164,6 +167,7 @@ const Image=styled.img`
     max-height: 160px;
     transition: tranform 0.1s ease-out; 
     ${mobile({maxHeight:'100px',width:'120px', marginTop:'8px'})}
+     ${tab({maxHeight:'100px',width:'110px', marginTop:'8px'})}
 `
 const TrendsContainer=styled.div`
     padding:30px 20px;
@@ -185,7 +189,8 @@ const TrendsContainer=styled.div`
        transform: scale(1.10);
        ${mobile({transform: 'scale(1.10)'})}
     };
-    ${mobile({padding:'10px 8px',maxHeight:'340px',width:'180px',margin:'5px'})}
+    ${mobile({padding:'10px 8px',maxHeight:'330px',width:'180px',marginLeft:'6px'})}
+     ${tab({maxHeight:'360px',width:'260px',marginLeft:'9px'})}
 
 `
 const Offer =styled.span`
@@ -204,12 +209,13 @@ const TrendsTitle=styled.p`
     font-family: 'Roboto';    
     text-align: justify;
     margin-bottom: 20px;
-    line-height: 30px;
+    line-height: 1.5;
     overflow: hidden;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-     ${mobile({fontSize:'14px'})}
+     ${mobile({fontSize:'14px',marginBotton:'10px'})}
+      ${mobile({fontSize:'16px',marginBotton:'16px'})}
 `
 
 const TrendsInfoContainer=styled.div`

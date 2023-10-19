@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import ProductCard from '../../Components/Product/ProductCard';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
-import { mobile } from '../../Responsive';
+import { mobile, tab } from '../../Responsive';
 
 const ProductsContainer=styled.div`
     display:grid;
@@ -16,11 +16,20 @@ const ProductsContainer=styled.div`
     margin:60px;
     ${mobile({display:'grid',
         gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',
-        gridTemplateRows:'repeat(auto-fit,minmax(36px,1fr))',
+        gridTemplateRows:'repeat(auto-fit,minmax(360px,1fr))',
         gridColumnGap:'1px',
         gridRowGap:'4px',
         alignItemS:'center',
-        margin:'0px',padding:'10px 6px'})}
+        margin:'2px',padding:'10px 0px'})}
+
+${tab({display:'grid',
+        gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',
+        gridTemplateRows:'repeat(auto-fit,minmax(360px,1fr))',
+        gridColumnGap:'1px',
+        gridRowGap:'4px',
+        alignItemS:'center',
+        margin:'2px',padding:'10px 0px'})}
+   
    
 `
 

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { mobile } from "../../Responsive";
-
+import { tab } from "../../Responsive";
 const HeaderContainer=styled.div`
     height:70px;
     background-color:  #2874f0;
@@ -14,6 +14,7 @@ const HeaderContainer=styled.div`
     top:0;
     z-index: 100;
     ${mobile({ height:'50px', margin:'0px',width:'100%'})}   
+    ${tab({ height:'50px', margin:'0px',width:'100%'})}   
   
    
 `
@@ -80,7 +81,8 @@ const RightWrapper=styled.div`
     align-items: center;
     justify-content: space-around;
     color:white;
-    ${mobile({ flex:2,gap:'1px',justifyContent:'space-around' })}
+    ${mobile({ flex:'2',gap:'1px',justifyContent:'space-around' ,marginRight:'2px'})}
+    ${tab({ flex:'1',gap:'1px',justifyContent:'center',marginRight:'4px'})}
     
 `
  

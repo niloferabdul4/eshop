@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { mobile } from "../../Responsive";
-
+import { tab } from "../../Responsive";
 export const Container=styled.div`
   
     display:flex;
@@ -10,9 +10,10 @@ export const Container=styled.div`
     z-index: 1;
     margin-left: auto;
     margin-right:auto;
-    background-color: lightgrey;
+  
   
     ${mobile({flexDirection:'column-reverse',margin:'0px',})}
+    ${tab({flexDirection:'column-reverse',margin:'0px',})}
   
   
 `
@@ -29,7 +30,8 @@ export const FilterToggle=styled.div`
     h4{
      font-weight: 400;    
     }
-    ${mobile({display:'block'})}
+    ${mobile({display:'block',margin:'10px 6px'})}
+    ${tab({display:'block',margin:'15px 10px'})}
 
 `
 export const ProductsSection=styled.div`
@@ -44,6 +46,7 @@ export const ProductsSection=styled.div`
     padding: 40px 30px;
     box-shadow: rgba(53, 48, 48, 0.15) 1.95px 1.95px 2.6px;
     color:rgba(0,0,0,0.7); 
+    background:transparent;
     margin : 10px; 
     ${mobile({
         flex:'1',
@@ -51,7 +54,15 @@ export const ProductsSection=styled.div`
         gridTemplateRows:'repeat(auto-fit,minmax(360px,1fr))',
         gridColumnGap:'1px',
         gridRowGap:'10px',
-        margin:'0px',padding:'10px 4px'})}
+        margin:'1px',padding:'10px 0px'})}
+     ${tab({
+        flex:'1',
+        gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',
+        gridTemplateRows:'repeat(auto-fit,minmax(400px,1fr))',
+        gridColumnGap:'10px',
+        gridRowGap:'10px',
+        margin:'4px',padding:'10px 1px',
+        width:'100%'})}
     
 `
 
@@ -68,5 +79,6 @@ export const FilterSection=styled.div`
     //position: sticky;
    // top:70px;
     ${mobile({display:'none'})}
-   
+
+    ${tab({display:'none'})}
 `
