@@ -11,7 +11,6 @@ export const Container=styled.div`
     margin-left: auto;
     margin-right:auto;
   
-  
     ${mobile({flexDirection:'column-reverse',margin:'0px',})}
     ${tab({flexDirection:'column-reverse',margin:'0px',})}
   
@@ -59,7 +58,7 @@ export const ProductsSection=styled.div`
         flex:'1',
         gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',
         gridTemplateRows:'repeat(auto-fit,minmax(400px,1fr))',
-        gridColumnGap:'10px',
+        gridColumnGap:'5px',
         gridRowGap:'10px',
         margin:'4px',padding:'10px 1px',
         width:'100%'})}

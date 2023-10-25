@@ -2,9 +2,10 @@ import styled from "styled-components"
 import { mobile } from "../../Responsive"
 import { tab } from "../../Responsive"
 export const ProductContainer=styled.div`
-    padding:36px 25px;
+    padding:26px 20px;
     margin:20px;
     display:flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -26,11 +27,11 @@ export const ProductContainer=styled.div`
 
 export const Image=styled.img`
     object-fit: contain;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     width:100%;
-    max-height:200px; 
-    ${mobile({ width:'130px',height:'140px',marginBottom:'2px'})}
-    ${tab({ width:'150px',height:'160px',marginBottom:'2px'})}
+    height:240px; 
+    ${mobile({ width:'130px',height:'160px',marginBottom:'1px'})}
+    ${tab({ width:'150px',height:'190px',marginBottom:'1px'})}
     `
 
 export const Title=styled.h3`
@@ -74,6 +75,14 @@ export const Rating=styled.div`
     flex-direction: row;
     justify-content: flex-start;
     gap:10px;
-    margin: 15px 0px;  
+    margin: 2px 0px;  
     ${mobile({ fontSize:'14px',margin:'0px'})}  
+`
+export const BtnContainer=styled.div`
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top:0px;
+
 `
