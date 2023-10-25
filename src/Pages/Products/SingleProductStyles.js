@@ -10,7 +10,6 @@ export const ProductContainer=styled.div`
         padding:60px;
         color:rgba(0,0,0,0.74);
         background-color: white;;
-        height: 90vh;
         ${mobile({ flexDirection:'column',padding:'0px',margin:'0px'})}
        
 

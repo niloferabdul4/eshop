@@ -15,12 +15,12 @@ const ProductsContainer=styled.div`
     padding: 40px 30px; 
     margin:60px;
     ${mobile({display:'grid',
-        gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',
+        gridTemplateColumns:'repeat(auto-fit,minmax(175px,1fr))',
         gridTemplateRows:'repeat(auto-fit,minmax(360px,1fr))',
-        gridColumnGap:'0.4px',
+        gridColumnGap:'0.2px',
         gridRowGap:'4px',
         alignItems:'center',
-        margin:'0.5px',padding:'10px 0px'})}
+        margin:'0.2px',padding:'10px 0px'})}
 
 ${tab({display:'grid',
         gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',

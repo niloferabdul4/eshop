@@ -49,11 +49,11 @@ export const ProductsSection=styled.div`
     margin : 10px; 
     ${mobile({
         flex:'1',
-        gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',
+        gridTemplateColumns:'repeat(auto-fit,minmax(175px,1fr))',
         gridTemplateRows:'repeat(auto-fit,minmax(360px,1fr))',
-        gridColumnGap:'0.4px',
+        gridColumnGap:'0.2px',
         gridRowGap:'10px',
-        margin:'0.5px',padding:'10px 0px'})}
+        margin:'0.2px',padding:'10px 0px'})}
      ${tab({
         flex:'1',
         gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',

@@ -21,8 +21,8 @@ export const ProductContainer=styled.div`
         transform: scale(1.03);
         transition: all ease 0.3s;
     }
-    ${mobile({ maxHeight:'360px',maxWidth:'180px',margin:'10px 0px',boxShadow:'none',padding:'10px 8px'})}
-    ${tab({ maxHeight:'360px',maxWidth:'190px',margin:'10px 0px',boxShadow:'none',padding:'10px'})}
+    ${mobile({ maxHeight:'360px',width:'175px',margin:'10px 0px',boxShadow:'none',padding:'10px 8px'})}
+    ${tab({ maxHeight:'360px',width:'190px',margin:'10px 0px',boxShadow:'none',padding:'10px'})}
 `
 
 export const Image=styled.img`
@@ -30,8 +30,8 @@ export const Image=styled.img`
     margin-bottom: 8px;
     width:100%;
     height:240px; 
-    ${mobile({ width:'130px',height:'160px',marginBottom:'1px'})}
-    ${tab({ width:'150px',height:'190px',marginBottom:'1px'})}
+    ${mobile({ width:'130px',height:'150px',marginBottom:'1px'})}
+    ${tab({ width:'150px',height:'180px',marginBottom:'1px'})}
     `
 
 export const Title=styled.h3`
