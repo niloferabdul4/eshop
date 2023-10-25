@@ -51,9 +51,9 @@ export const ProductsSection=styled.div`
         flex:'1',
         gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',
         gridTemplateRows:'repeat(auto-fit,minmax(360px,1fr))',
-        gridColumnGap:'1px',
+        gridColumnGap:'0.4px',
         gridRowGap:'10px',
-        margin:'1px',padding:'10px 0px'})}
+        margin:'0.5px',padding:'10px 0px'})}
      ${tab({
         flex:'1',
         gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',

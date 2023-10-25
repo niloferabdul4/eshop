@@ -21,7 +21,7 @@ export const ProductContainer=styled.div`
         transform: scale(1.03);
         transition: all ease 0.3s;
     }
-    ${mobile({ maxHeight:'360px',maxWidth:'190px',margin:'10px 0px',boxShadow:'none',padding:'10px'})}
+    ${mobile({ maxHeight:'360px',maxWidth:'180px',margin:'10px 0px',boxShadow:'none',padding:'10px 8px'})}
     ${tab({ maxHeight:'360px',maxWidth:'190px',margin:'10px 0px',boxShadow:'none',padding:'10px'})}
 `
 

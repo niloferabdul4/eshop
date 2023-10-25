@@ -33,7 +33,7 @@ const ModalContent=styled.div`
     box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
     border-radius: 8px; 
     line-height: 40px;
-    ${mobile({ maxWidth:'320px',height:'260px',padding:'50px 20px'})}
+    ${mobile({ maxWidth:'300px',height:'260px',padding:'50px 20px'})}
 `
 
 const ModalInfo=styled.p`
@@ -70,7 +70,7 @@ const Button=styled.div`
         margin-top: 20px;
         margin-bottom: 20px;
         line-height:35px;
-        ${mobile({ fontSize:'0.98rem'})}
+        ${mobile({ fontSize:'0.92rem'})}
       
 ` 
 

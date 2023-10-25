@@ -19,15 +19,15 @@ const ProductsContainer=styled.div`
         gridTemplateRows:'repeat(auto-fit,minmax(360px,1fr))',
         gridColumnGap:'0.4px',
         gridRowGap:'4px',
-        alignItemS:'center',
-        margin:'1px',padding:'10px 0px'})}
+        alignItems:'center',
+        margin:'0.5px',padding:'10px 0px'})}
 
 ${tab({display:'grid',
         gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',
         gridTemplateRows:'repeat(auto-fit,minmax(360px,1fr))',
         gridColumnGap:'3px',
         gridRowGap:'4px',
-        alignItemS:'center',
+        alignItems:'center',
         margin:'2px',padding:'10px 0px'})}
    
    
