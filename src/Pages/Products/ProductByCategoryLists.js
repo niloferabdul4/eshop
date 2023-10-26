@@ -47,7 +47,7 @@ const Button=styled.div`
         margin: 30px;
         padding: 10px; 
         transition   : all 0.2s ease;
-        ${mobile({width:'120px',fontSize:'0.96rem'})}
+        ${mobile({width:'120px',fontSize:'0.96rem',margin:'5px',height:'30px'})}
         
 `  
 

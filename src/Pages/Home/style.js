@@ -180,7 +180,7 @@ const TrendsContainer=styled.div`
     z-index: 1;
     max-height: 500px;
     height: 500px;
-    width:320px;
+    width:310px;
     cursor: pointer;
     position: realtive;
     color:rgba(0,0,0,0.7);
@@ -189,8 +189,8 @@ const TrendsContainer=styled.div`
        transform: scale(1.10);
        ${mobile({transform: 'scale(1.10)'})}
     };
-    ${mobile({padding:'10px 8px',maxHeight:'330px',width:'180px',marginLeft:'6px'})}
-     ${tab({maxHeight:'360px',width:'260px',marginLeft:'9px'})}
+    ${mobile({padding:'10px 8px',maxHeight:'330px',width:'180px',marginLeft:'3px'})}
+     ${tab({maxHeight:'360px',width:'260px',marginLeft:'4px'})}
 
 `
 const Offer =styled.span`

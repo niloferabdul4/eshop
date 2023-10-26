@@ -13,7 +13,7 @@ export const ProductContainer=styled.div`
     box-shadow: rgba(53, 48, 48, 0.15) 1.95px 1.95px 2px;
     background-color: white;
     z-index: 1;
-    max-height: 600px;
+    min-height: 600px;
     max-width: 380px;  
     cursor:pointer;
     color:rgba(0,0,0,0.7);  
@@ -21,8 +21,8 @@ export const ProductContainer=styled.div`
         transform: scale(1.03);
         transition: all ease 0.3s;
     }
-    ${mobile({ maxHeight:'360px',width:'175px',margin:'10px 0px',boxShadow:'none',padding:'10px 8px'})}
-    ${tab({ maxHeight:'360px',width:'190px',margin:'10px 0px',boxShadow:'none',padding:'10px'})}
+    ${mobile({minHeight:'360px',width:'175px',margin:'10px 0px',boxShadow:'none',padding:'10px 8px'})}
+    ${tab({ minHeight:'360px',width:'190px',margin:'10px 0px',boxShadow:'none',padding:'10px'})}
 `
 
 export const Image=styled.img`
@@ -41,7 +41,7 @@ export const Title=styled.h3`
     text-align: justify;
     margin-bottom: 10px;
     line-height: 1.6;
-    ${mobile({ fontSize:'15px', fontWeight: '400',marginBottom:'4px'})}
+    ${mobile({ fontSize:'15px', fontWeight: '400',marginBottom:'2px'})}
   
 `
 
@@ -55,7 +55,7 @@ export const InfoContainer=styled.div`
     display: -webkit-box;
     -webkit-box-orient: vertical;
     gap:10px;  
-    ${mobile({ padding:'0px',margin:'8px 0px',gap:'4px'})}
+    ${mobile({ padding:'0px',margin:'1px 0px',gap:'2px'})}
    
  
 `
@@ -84,5 +84,5 @@ export const BtnContainer=styled.div`
     justify-content: center;
     align-items: flex-start;
     margin-top:0px;
-
+    ${mobile({ fontSize:'14px',margin:'0px'})}  
 `
