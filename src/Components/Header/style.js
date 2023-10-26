@@ -81,7 +81,7 @@ const RightWrapper=styled.div`
     align-items: center;
     justify-content: space-around;
     color:white;
-    ${mobile({ flex:'2',gap:'1px',justifyContent:'space-around' ,marginRight:'2px'})}
+    ${mobile({ flex:'2',gap:'1px',justifyContent:'center' ,marginRight:'2px'})}
     ${tab({ flex:'1',gap:'1px',justifyContent:'center',marginRight:'4px'})}
     
 `
