@@ -38,11 +38,10 @@ export const InfoContainer=styled.div`
 
 `
 export const Title=styled.h3`
-        font-size:30px;
+        font-size:28px;
         font-weight: 400;
         margin-bottom: 20px;
         line-height: 36px;
-        text-align: justify;
         ${mobile({ fontSize:'17px'})}
         
 

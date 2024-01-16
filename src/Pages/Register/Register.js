@@ -30,7 +30,7 @@ const Register = () => {
             .then((auth)=>{
                             if(auth)          // successfully created user with email and pwd
                             {
-                                navigate('/')
+                                navigate(-1)
                             }
                         })      
             .catch((error)=>console.log(error.message))   // error

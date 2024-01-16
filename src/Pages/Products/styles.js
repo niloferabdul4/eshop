@@ -37,10 +37,10 @@ export const ProductsSection=styled.div`
     height: 100%;
     flex:0.75;
     display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(380px,1fr));   
-    grid-template-rows: repeat(auto-fit,minmax(600px,1fr));           
+    grid-template-columns: repeat(auto-fill,minmax(360px,1fr));   
+    grid-template-rows: repeat(auto-fill,minmax(300px,1fr));           
     grid-column-gap:10px;
-    grid-row-gap: 60px;
+    grid-row-gap: 10px;
     justify-content: center; 
     padding: 40px 30px;
     box-shadow: rgba(53, 48, 48, 0.15) 1.95px 1.95px 2.6px;
@@ -49,8 +49,8 @@ export const ProductsSection=styled.div`
     margin : 10px; 
     ${mobile({
         flex:'1',
-        gridTemplateColumns:'repeat(auto-fit,minmax(175px,1fr))',
-        gridTemplateRows:'repeat(auto-fit,minmax(360px,1fr))',
+        gridTemplateColumns:'repeat(auto-fill,minmax(175px,1fr))',
+        gridTemplateRows:'repeat(auto-fill,minmax(360px,1fr))',
         gridColumnGap:'0.2px',
         gridRowGap:'10px',
         margin:'0.2px',padding:'10px 0px'})}

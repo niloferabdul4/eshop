@@ -7,13 +7,13 @@ import { mobile, tab } from '../../Responsive';
 
 const ProductsContainer=styled.div`
     display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(380px,1fr));   
-    grid-template-rows: repeat(auto-fit,minmax(600px,1fr));           
+    grid-template-columns: repeat(auto-fill,minmax(380px,1fr));   
+    grid-template-rows: repeat(auto-fill,minmax(200px,1fr));           
     grid-column-gap:10px;
-    grid-row-gap: 60px;
+    grid-row-gap: 10px;
     justify-content: center;    
-    padding: 40px 30px; 
-    margin:60px;
+    padding: 40px 20px; 
+    margin:60px 20px;
     ${mobile({display:'grid',
         gridTemplateColumns:'repeat(auto-fit,minmax(175px,1fr))',
         gridTemplateRows:'repeat(auto-fit,minmax(360px,1fr))',
