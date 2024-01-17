@@ -1,7 +1,5 @@
 import React from 'react';
 import { useNavigate} from 'react-router-dom';
-import { loadStripe } from '@stripe/stripe-js';
-import { Elements } from '@stripe/react-stripe-js';
 import {  InfoContainer,
   CheckoutProductContainer,
   ProductTitle,
@@ -9,6 +7,7 @@ import {  InfoContainer,
   Image } from './style';
 
 
+  
 
 const CheckoutProduct = ({checkoutProd}) => {      
         
